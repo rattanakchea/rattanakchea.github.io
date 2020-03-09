@@ -1,4 +1,14 @@
-# Rattanak2020
+# README
+
+## Generate new Module
+
+- ng g module songLyrics --routing=true
+
+## Generate a component inside a module (case sensitive)
+
+- ng g c song-lyrics/home --module song-lyrics.module
+
+---
 
 `ng new rattanak2020 --directory=./ --style=scss --routing=true`
 
