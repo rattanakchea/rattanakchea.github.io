@@ -1,0 +1,243 @@
+[
+  {
+    "id": "redbox",
+    "title": "Redbox Clone",
+    "description": "Angular4 to emulate Redbox dvd rental kiosk",
+    "dateCreated": "10/20/2016",
+    "demo": "https://rattanakchea.github.io/redbox-clone/",
+    "source": "https://github.com/rattanakchea/redbox-clone",
+    "image": "assets/images/web/redbox-clone.png",
+    "featured": true
+  },
+  {
+    "id": "card-game",
+    "slug": "card-games",
+    "title": "Card Games",
+    "description": "This project includes two card games: Blackjack and Sikou. Needless to say, Blackjack is a well-known card game. Sikou is the first Cambodian card game written in JavaScript. The project was written in a custom JavaScript MVC pattern. It was designed to make the code reusable and extensible.",
+    "dateCreated": "10/20/2016",
+    "demo": "https://rattanakchea.github.io/cardgames/",
+    "source": "https://github.com/rattanakchea/cardgames",
+    "image": "assets/images/web/cardgames.png",
+    "type": "JavaScript",
+    "featured": true
+  },
+  {
+    "slug": "khmer-tube",
+    "title": "Khmer Tube",
+    "description": "This single page application is built with Angular, JavaScript, Youtube API. The application targets Cambodian users who like to watch local news and entertainment.",
+    "dateCreated": "09/12/2015",
+    "demo": "http://rattanakchea.github.io/khmertubeapp/#/",
+    "source": "https://github.com/rattanakchea/khmertubeapp",
+    "image": "assets/images/web/khmertube.jpg",
+    "featured": true
+  },
+  {
+    "id": "device-emulator",
+    "slug": "device-emulator",
+    "title": "Device Emulator",
+    "description": "This simple application allow you to change the skin for different devices: Android Phone, iPhone and iPad, and scale proportionally to device width and height. Angular Directive: https://github.com/rattanakchea/device-emulator",
+    "dateCreated": "7/31/2016",
+    "demo": "https://rattanakchea.github.io/device-emulator/",
+    "source": "https://github.com/rattanakchea/device-emulator",
+    "image": "assets/images/web/device-emulator.png"
+  },
+  {
+    "id": "monopoly-checker",
+    "slug": "monopoly-checker",
+    "title": "Monopoly Checker",
+    "description": "This application helps users keeping track of Monopoly tickets and their winning prize. It was built within 3 days. Technology: AngularJS, localStrage, JavaScript.",
+    "dateCreated": "5/5/2016",
+    "demo": "http://rattanakchea.github.io/monopolychecker/",
+    "source": "https://github.com/rattanakchea/monopolychecker",
+    "image": "assets/images/web/monopolychecker.jpg"
+  },
+  {
+    "id": "mini-trello",
+    "slug": "mini-trello",
+    "title": "Mini Trello",
+    "description": "Build a todo app in a day with Angular + Firebase with user email authentication. Tech: Angular, Firebase, Unit Testing, Jasmine, Grunt.",
+    "dateCreated": "2/18/2015",
+    "demo": "https://awesometodos.firebaseapp.com",
+    "image": "assets/images/web/minitrello.png"
+  },
+  {
+    "title": "Google Keep Clone",
+    "description": "Google Keep Clone provides CRUD operations for note-taking. I used OOP PHP to build a web service supporting GET, POST, PUT, and UPDATE requests. For front end, I used Angular JS for tempting and using $http service to manage requests. The MaterializeCSS framework provides modern, beautiful interface. By separating server, client and database layer, the business logic can be separated from presentation. This allows me to extend applications or build mobile application in the future.",
+    "demo": "http://note-taking.atwebpages.com/#",
+    "source": "https://github.com/rattanakchea/google-keep-clone",
+    "image": "assets/images/web/google-keep-clone.png"
+  },
+  {
+    "id": 4,
+    "title": "BookmarkEd Android App",
+    "description": "Buyer and Seller community for buying and selling textbooks. Team project of four. I was responsible for functional development and some UI components",
+    "source": "https://github.com/rattanakchea/BOOKMARKed",
+    "image": "assets/images/android/bookmarked.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Memory Game",
+    "description": "Memory Game is fun pairing game in which the goal is to find the matching pair of images. The project was built with Javascript, Jquery to interact with Youtube V3 and TheMovieDB APIs.",
+
+    "demo": "https://dl.dropboxusercontent.com/u/2122820/projects/memory-game/index.html",
+    "source": "https://github.com/rattanakchea/memory-game",
+    "image": "assets/images/web/memory-game.png"
+  },
+  {
+    "id": 6,
+    "title": "Raddit on Rails",
+    "description": "Ruby on Rails application with User Authentication, URL Links, Comments and voting systems, deployed on Heroku.",
+    "demo": "http://raddit-on-rails.herokuapp.com/",
+    "source": "https://github.com/rattanakchea/reddit-in-rails",
+    "image": "assets/images/web/raddit-on-rails.png"
+  },
+  {
+    "id": 7,
+    "title": "Polymer Youtube Project",
+    "description": "First app built with Polymer from Google",
+
+    "demo": "http://rattanakchea.github.io/polymer-youtube-project/",
+    "source": "https://github.com/rattanakchea/polymer-youtube-project",
+    "image": "assets/images/web/polymer-youtube-project.png"
+  },
+  {
+    "id": 9,
+    "title": "Hangman",
+    "description": "Classic yet fun hangman game, guess a country or a movie actor",
+    "demo": "http://rattanakchea.github.io/hangman/",
+    "source": "https://github.com/rattanakchea/hangman",
+    "image": "assets/images/web/hangman.png"
+  },
+  {
+    "id": 12,
+    "title": "PHP-Database CMS",
+    "description": "Content Management System using Object oriented PHP using PDO to connect to SQLite. Login with username(admin) and password(pass) to test the demo.",
+    "demo": "http://awesomecms.atwebpages.com/",
+    "source": "https://github.com/rattanakchea/cms-oop-php",
+    "image": "assets/images/web/php-cms.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Appointment Booking Application",
+    "description": "This web application was built with pure PHP, Javascript, and MySQL. I used PhpliteManager to manage database.",
+    "demo": "",
+    "source": "",
+    "image": "assets/images/web/appointment-booking.png"
+  },
+  {
+    "id": 13,
+    "title": "Bookmark Manager",
+    "description": "Usage of Angular.js and Firebase to build real time application for bookmark keeping",
+    "demo": "https://bookmark101.firebaseapp.com/",
+    "source": "",
+    "image": "assets/images/web/bookmark-manager.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Khmer Online Radio",
+    "description": "Build Android Hybrid app PhoneGap with HTML5 and JavasSript. This app podcasts many radio stations for free.",
+    "demo": "https://play.google.com/store/apps/details?id=com.rattanak.khmeronlineradio",
+    "source": "https://github.com/rattanakchea/khmer-online-radio",
+    "image": "assets/images/android/khmer-radio.png"
+  },
+  {
+    "id": 15,
+    "title": "Library Manager",
+    "description": "Hosted on Heroku - This app uses Backbone.js as the frontend framework and Laravel as backbend to build RESTful API",
+    "demo": "http://lit-sierra-3344.herokuapp.com/#",
+    "source": "",
+    "image": "assets/images/web/library-manager.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Simple Todo List",
+    "description": "HTML5 localstorage, CSS3, jQuery, jQuery Mobile",
+    "demo": "http://rattanakchea.github.io/simple-todo",
+    "source": ""
+  },
+  {
+    "id": "0",
+    "slug": "lucidmedia",
+    "title": "Lucid Media",
+    "description": "LUCIDMEDIA was born at a late-night after party at the Palm Springs Film Festival, over diet cokes, a shared love for the craft and science of filmmaking, and an aversion to mediocrity. Founders Gina Leonard and Dan Strickland combined forces, harnessing decades of experience working with blue-chip brands from around the globe.",
+    "tasks": [
+      "Adding custom CSS style to make responsive website",
+      "Custom Wordpress page template",
+      "User-centric clean design"
+    ],
+    "dateCreated": "6/20/2016",
+    "demo": "http://areyoulucid.com/",
+    "image": "assets/images/wordpress/areyoulucid.jpg",
+    "type": "work",
+    "mobile": true
+  },
+  {
+    "id": "1",
+    "slug": "prideofbristolbay",
+    "title": "Pride Of Bristol Bay",
+    "description": "This client needs to set up their E-commerce web application to allow customers to place or deposite an order online, and be notified of when to pickup their orders.",
+    "tasks": [
+      "Setup custom e-commerce with WooCommerce to allow customers to place and reserve Salmon orders",
+      "Cutomize WooCommerce Pickup Location plugin",
+      "Work with client to improve sitewide UX"
+    ],
+    "dateCreated": "7/23/2016",
+    "demo": "https://prideofbristolbay.com/shop/#",
+    "image": "assets/images/wordpress/prideofbristolbay1.jpg",
+    "type": "work"
+  },
+  {
+    "id": "2",
+    "slug": "meddle",
+    "title": "Meddle",
+    "description": "Meddile is a NEW social dating application with a fun concept. We built meddle for you single folks who don’t have time to sift through the hundreds (thousands?) of potential matches out there, as well as for your friends and family who would love to do the sifting for you!",
+    "tasks": [
+      "Built web application from the prototypes",
+      "Developed social dating web application with AngularJS + Firebase as backend database",
+      "Worked closely with product manager and other developers through product life cycle"
+    ],
+    "dateCreated": "7/23/2016",
+    "demo": "https://meddlestaging.firebaseapp.com",
+    "image": "assets/images/meddle-project/meddle-mobile-1.jpg",
+    "moreImages": [
+      "assets/images/meddle-project/meddle-web-1.jpg",
+      "assets/images/meddle-project/userflow-diagram.jpg",
+      "assets/images/meddle-project/meddle-wireframe-1.jpg"
+    ],
+    "type": "work",
+    "featured": true
+  },
+  {
+    "id": 17,
+    "title": "Dental ADP",
+    "description": "For this Wordpress Ecommerce Website. I was the only developer and designer for this project. I was invoved from project planning, design, SEO, and development",
+    "demo": "http://dentaladp.com",
+    "source": "",
+    "image": "assets/images/wordpress/wp-denal-adp.jpg",
+    "type": "work"
+  },
+  {
+    "id": 4,
+    "slug": "phase-rx",
+    "title": "Phase Rx",
+    "description": "",
+    "tasks": [
+      "Built PHP shortcode that pull and format data from internal API",
+      "Worked on sitewide UX design and user flow",
+      "Opitimize multimedias for performance"
+    ],
+    "demo": "http://phaserx.com/",
+    "source": "",
+    "image": "assets/images/wordpress/phase-rx.jpg",
+    "type": "work"
+  },
+  {
+    "id": 10,
+    "title": "Pain Free Move Well Chiropractic",
+    "description": "Desktop and mobile responsive website for chropractic therapy based in Lynnwood, Washington.",
+    "demo": "",
+    "source": "",
+    "image": "assets/images/wordpress/pain-free-move-well.png",
+    "type": "work"
+  }
+]
