@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: "app-projects",
@@ -20,6 +21,6 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjects() {
-    return this.http.get(this.projectUrl);
+    return this.http.get(this.projectUrl).pipe(delay(5000));
   }
 }
