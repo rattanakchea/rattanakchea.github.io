@@ -2,6 +2,7 @@
 
 - `ng new rattanak2020 --directory=./ --style=scss --routing=true`
 - generate projects component in App Module `ng g c projects --module app.module`
+- generate interceptor: `ng g interceptor interceptors/Loading --skipTests=true`
 
 ## Generate new Module
 
