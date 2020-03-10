@@ -19,6 +19,11 @@ export class LoadingInterceptor implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
     console.log("loading interceptor ");
+
+    if (this.activeRequests === 0) {
+      // this.loadingScreenService.startLoading();
+    }
+
     return next.handle(request);
   }
 }
