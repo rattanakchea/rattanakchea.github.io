@@ -1,5 +1,8 @@
 # README
 
+- `ng new rattanak2020 --directory=./ --style=scss --routing=true`
+- generate projects component in App Module `ng g c projects --module app.module`
+
 ## Generate new Module
 
 - ng g module songLyrics --routing=true
@@ -8,15 +11,19 @@
 
 - ng g c song-lyrics/home --module song-lyrics.module
 
+## My TODO
+
+- play with http interceptor
+
 ---
 
-`ng new rattanak2020 --directory=./ --style=scss --routing=true`
+## References
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+- HTTP interceptor: https://levelup.gitconnected.com/the-correct-way-to-make-api-requests-in-an-angular-application-22a079fe8413
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
 ## Code scaffolding
 
