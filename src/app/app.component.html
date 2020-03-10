@@ -17,24 +17,26 @@
           <a class="nav-link active" href="index.html">Home</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" routerLink="./song-lyrics">Projects</a>
+          <a class="nav-link" routerLink="/projects">Projects</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" href="cv.html">CV</a>
+          <a class="nav-link" href="">(Logo) LinkedIn</a>
         </li>
         <li class="nav-item" role="presentation">
-          <a class="nav-link" href="hire-me.html">Hire me</a>
+          <a class="nav-link" href="">Dark Theme</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="content page" role="main">
+<div class="container content" role="main">
   <router-outlet></router-outlet>
-
-  <!-- Footer -->
-  <footer style="position: absolute; bottom: 0;">
-    2020 Rattanak
-  </footer>
 </div>
+
+<!-- Footer -->
+<footer
+  style="position: absolute; bottom: 0; text-align: center; width: 100%; background-color: azure;"
+>
+  <p>2020 Rattanak</p>
+</footer>
