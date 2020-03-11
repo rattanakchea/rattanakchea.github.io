@@ -6,3 +6,31 @@
   <li>User receives feedback after submission</li>
   <li>User receive email with link to a Leetcode problem everyday</li>
 </ul>
+
+<div class="container mx-auto">
+  <form (ngSubmit)="onSubmit()" #emailForm="ngForm">
+    <div class="form-row align-items-center">
+      <div class="col-auto w-50">
+        <label class="sr-only" for="inlineFormInput">Name</label>
+        <input
+          type="text"
+          class="form-control mb-2"
+          placeholder="Enter your email"
+          name="email"
+          required
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          [(ngModel)]="email"
+        />
+      </div>
+      <div class="col-auto">
+        <button
+          type="submit"
+          class="btn btn-primary mb-2"
+          [disabled]="!emailForm.form.valid"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
