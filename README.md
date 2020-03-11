@@ -3,6 +3,7 @@
 - `ng new rattanak2020 --directory=./ --style=scss --routing=true`
 - generate projects component in App Module `ng g c projects --module app.module`
 - generate interceptor: `ng g interceptor interceptors/Loading --skipTests=true`
+- generate UI service `ng g service services/UI`
 
 ## Generate new Module
 
@@ -15,6 +16,11 @@
 ## My TODO
 
 - play with http interceptor
+
+## Internal projects
+
+- Song Lyrics Finder
+- Algorithms Visualizer
 
 ---
 

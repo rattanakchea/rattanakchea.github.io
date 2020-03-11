@@ -1,25 +1,26 @@
-<section class="portfolio">
-  <div class="avatar"></div>
-  <div class="about-me">
-    <p>
-      Hello! I am <strong>Rattanak Chea</strong>. I software engineer developer.
-      I have the passion for building full stack applications.
-    </p>
-    <a class="btn btn-outline-primary" role="button" href="#">Contact me</a>
-  </div>
-</section>
+<div
+  class="intro-wrapper d-flex flex-column justify-content-center align-items-center"
+>
+  <section class="portfolio">
+    <div class="avatar"></div>
+    <div class="about-me">
+      <p>
+        Hello! I am <strong>Rattanak Chea</strong>. I software engineer
+        developer. I have the passion for building full stack applications.
+      </p>
+    </div>
+  </section>
 
-<section class="portfolio-block block-intro container mx-auto">
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
     <pre *ngSwitchDefault>
-Hi there, thank you for visiting my personal site.
-</pre
+  Hi there, thank you for visiting my personal site.
+  </pre
     >
     <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
     <pre *ngSwitchCase="'dependency'">ng add _____</pre>
     <pre *ngSwitchCase="'test'">ng test</pre>
     <pre *ngSwitchCase="'build'">ng build --prod</pre>
   </div>
-</section>
-<input type="hidden" #selection />
+  <input type="hidden" #selection />
+</div>
