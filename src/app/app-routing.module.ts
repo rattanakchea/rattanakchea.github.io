@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
+import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "projects",
     component: ProjectsComponent
+  },
+  {
+    path: "leetcode-reminder",
+    component: LeetcodeReminderComponent
   },
   {
     path: "song-lyrics",

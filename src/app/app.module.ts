@@ -7,13 +7,15 @@ import { IntroductionComponent } from "./introduction/introduction.component";
 import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { loadingInterceptorProviders } from './interceptors/loading.interceptor';
+import { LeetcodeReminderComponent } from './leetcode-reminder/leetcode-reminder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IntroductionComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LeetcodeReminderComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [loadingInterceptorProviders],
