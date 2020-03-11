@@ -16,6 +16,13 @@ const routes: Routes = [
     path: "song-lyrics",
     loadChildren: () =>
       import("./song-lyrics/song-lyrics.module").then(m => m.SongLyricsModule)
+  },
+  {
+    path: "algorithm-visualizer",
+    loadChildren: () =>
+      import("./algorithm-visualizer/algorithm-visualizer.module").then(
+        m => m.AlgorithmVisualizerModule
+      )
   }
 ];
 
