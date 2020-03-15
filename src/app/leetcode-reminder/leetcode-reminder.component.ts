@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { delay } from "rxjs/operators";
+import { environment } from "src/environments/environment";
 
 @Component({
   selector: "app-leetcode-reminder",
@@ -18,9 +19,20 @@ export class LeetcodeReminderComponent implements OnInit {
 
   onSubmit() {
     console.log("You submitted: ", this.email);
+    const subscribeURI =
+      environment.API.rootUrl +
+      environment.API.emailAPI.basePath +
+      environment.API.emailAPI.subscribe;
+
+    console.log("subscribeURI", subscribeURI);
 
     // Todo replace with my end-point to accept email, timestamp
     // Test loading spinner with interceptor
-    return this.http.get(this.projectUrl).pipe(delay(5000));
+    return this.http
+      .post(subscribeURI, { email: this.email })
+      .pipe(delay(3000))
+      .subscribe(result => {
+        console.log({ result });
+      });
   }
 }

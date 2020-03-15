@@ -1,5 +1,9 @@
 # README
 
+This is my portfolio site built in 2020 using Angular 9.
+
+- Mostly front end projects that interact with third-party APIs or the backend that I have built.
+
 - `ng new rattanak2020 --directory=./ --style=scss --routing=true`
 - generate projects component in App Module `ng g c projects --module app.module`
 - generate interceptor: `ng g interceptor interceptors/Loading --skipTests=true`
@@ -17,6 +21,9 @@
 ## My TODO
 
 - play with http interceptor
+- Angular SharedModule for header, footer components
+- Angular Material Snackbar
+- Angular UIService spinner
 
 ## Internal projects
 
