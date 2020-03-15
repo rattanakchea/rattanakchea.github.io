@@ -10,6 +10,7 @@ import { environment } from "src/environments/environment";
 })
 export class LeetcodeReminderComponent implements OnInit {
   email: string = "rattanak22@gmail.com";
+  result: string = "";
 
   constructor(private http: HttpClient) {}
 
@@ -31,8 +32,9 @@ export class LeetcodeReminderComponent implements OnInit {
     return this.http
       .post(subscribeURI, { email: this.email })
       .pipe(delay(3000))
-      .subscribe(result => {
-        console.log({ result });
+      .subscribe((data: any) => {
+        this.result = data.status;
+        this.email = "";
       });
   }
 }
