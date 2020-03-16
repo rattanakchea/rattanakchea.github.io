@@ -21,9 +21,9 @@ export class LeetcodeReminderComponent implements OnInit {
   onSubmit() {
     console.log("You submitted: ", this.email);
     const subscribeURI =
-      environment.API.rootUrl +
-      environment.API.emailAPI.basePath +
-      environment.API.emailAPI.subscribe;
+      environment.rootUrl +
+      environment.emailAPI.basePath +
+      environment.emailAPI.subscribe;
 
     console.log("subscribeURI", subscribeURI);
 
