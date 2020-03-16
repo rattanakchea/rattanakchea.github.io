@@ -27,13 +27,10 @@ export class LoadingScreenComponent implements AfterViewInit, OnDestroy {
   ) {}
 
   ngAfterViewInit(): void {
-    console.log("loading screen componet listener");
     this._elmRef.nativeElement.style.display = "none";
     this.loadingSubscription = this.loadingScreenService.loadingStatus
       .pipe(debounceTime(this.debounceTime))
       .subscribe((status: boolean) => {
-        console.log("ever comes here");
-
         this._elmRef.nativeElement.style.display = status ? "block" : "none";
         this._changeDetectorRef.detectChanges();
       });

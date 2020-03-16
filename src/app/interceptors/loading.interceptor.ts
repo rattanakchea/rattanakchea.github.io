@@ -20,10 +20,7 @@ export class LoadingInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    console.log("loading interceptor ");
-
     if (this.activeRequests === 0) {
-      console.log("start loading");
       this.loadingScreenService.startLoading();
     }
     this.activeRequests++;
