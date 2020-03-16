@@ -9,6 +9,7 @@ import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { loadingInterceptorProviders } from './interceptors/loading.interceptor';
 import { LeetcodeReminderComponent } from './leetcode-reminder/leetcode-reminder.component';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LeetcodeReminderComponent } from './leetcode-reminder/leetcode-reminder
     IntroductionComponent,
     HomeComponent,
     ProjectsComponent,
-    LeetcodeReminderComponent
+    LeetcodeReminderComponent,
+    LoadingScreenComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [loadingInterceptorProviders],
