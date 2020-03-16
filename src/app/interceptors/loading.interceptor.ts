@@ -7,12 +7,14 @@ import {
   HTTP_INTERCEPTORS
 } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { LoadingScreenService } from "../services/loading-screen/loading-screen.service";
+import { finalize, delay } from "rxjs/operators";
 
 @Injectable()
 export class LoadingInterceptor implements HttpInterceptor {
   activeRequests: number = 0;
 
-  constructor() {}
+  constructor(private loadingScreenService: LoadingScreenService) {}
 
   intercept(
     request: HttpRequest<unknown>,
@@ -21,10 +23,20 @@ export class LoadingInterceptor implements HttpInterceptor {
     console.log("loading interceptor ");
 
     if (this.activeRequests === 0) {
-      // this.loadingScreenService.startLoading();
+      console.log("start loading");
+      this.loadingScreenService.startLoading();
     }
+    this.activeRequests++;
 
-    return next.handle(request);
+    return next.handle(request).pipe(
+      // delay(5000), use to mimic slow network
+      finalize(() => {
+        this.activeRequests--;
+        if (this.activeRequests === 0) {
+          this.loadingScreenService.stopLoading();
+        }
+      })
+    );
   }
 }
 

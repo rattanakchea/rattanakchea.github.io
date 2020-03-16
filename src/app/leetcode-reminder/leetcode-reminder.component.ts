@@ -31,7 +31,6 @@ export class LeetcodeReminderComponent implements OnInit {
     // Test loading spinner with interceptor
     return this.http
       .post(subscribeURI, { email: this.email })
-      .pipe(delay(3000))
       .subscribe((data: any) => {
         this.result = data.status;
         this.email = "";
