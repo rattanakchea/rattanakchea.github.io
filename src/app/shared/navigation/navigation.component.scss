@@ -1,4 +1,11 @@
-:host {
-  width: 100%;
-  height: 100px;
+.portfolio-navbar.navbar {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-navbar .logo {
+  font-size: 1.5rem;
+}
+
+nav li a {
+  color: white;
 }
