@@ -23,10 +23,10 @@ This is my portfolio site built in 2020 using Angular 9.
 
 ## My TODO
 
-- play with http interceptor
-- Angular SharedModule for header, footer components
+- [x] Http interceptor & Loading Service
+- [] Angular SharedModule for header, footer components
 - Angular Material Snackbar
-- Angular UIService spinner
+- [] Dark Theme
 
 ## Internal projects
 
