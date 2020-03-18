@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from "@angular/core";
 
 export interface INavData {
   appName: string;
+  navBackground: string;
 }
 @Component({
   selector: "app-dynamic-nav",

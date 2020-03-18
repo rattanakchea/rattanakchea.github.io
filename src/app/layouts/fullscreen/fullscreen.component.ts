@@ -8,7 +8,8 @@ import { INavData } from "src/app/shared/dynamic-nav/dynamic-nav.component";
 })
 export class FullscreenComponent implements OnInit {
   data: INavData = {
-    appName: "Covid-19 Dashboard"
+    appName: "Covid-19 Dashboard",
+    navBackground: "gradient-1"
   };
 
   constructor() {}
