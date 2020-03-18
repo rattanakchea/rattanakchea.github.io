@@ -1,14 +1,12 @@
-<app-navigation></app-navigation>
-
-<div class="container content" role="main">
-  <router-outlet></router-outlet>
-</div>
 <app-loading-screen></app-loading-screen>
+<section class="wrapper d-flex flex-column justify-content-between">
+  <app-navigation></app-navigation>
 
-<!-- Footer -->
-<footer
-  class="gradient py-3 w-100 d-flex justify-content-center"
-  style="position: absolute; bottom: 0"
->
-  <span>2020 Rattanak</span>
-</footer>
+  <section class="container content d-flex flex-fill" role="main">
+    <router-outlet></router-outlet>
+  </section>
+
+  <footer class="gradient py-3 w-100 d-flex justify-content-center">
+    <span>2020 Rattanak</span>
+  </footer>
+</section>

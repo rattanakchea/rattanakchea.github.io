@@ -1,7 +1,10 @@
 :host {
+  .wrapper {
+    height: 100%;
+  }
+
   .content {
     display: flex;
-    margin: 100px auto 0;
-    padding: 0 16px;
+    margin-top: 2rem;
   }
 }

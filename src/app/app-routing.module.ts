@@ -3,6 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { HomeComponent } from "./home/home.component";
 import { ProjectsComponent } from "./projects/projects.component";
 import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder.component";
+import { Page404Component } from "./shared/page404/page404.component";
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       import("./algorithm-visualizer/algorithm-visualizer.module").then(
         m => m.AlgorithmVisualizerModule
       )
+  },
+  {
+    path: "**",
+    component: Page404Component
   }
 ];
 
