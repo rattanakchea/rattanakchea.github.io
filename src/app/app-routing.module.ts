@@ -5,11 +5,22 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder.component";
 import { Page404Component } from "./shared/page404/page404.component";
 import { FullscreenComponent } from "./layouts/fullscreen/fullscreen.component";
+import { DefaultComponent } from "./layouts/default/default.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: DefaultComponent,
+    children: [
+      {
+        path: "",
+        component: DefaultComponent
+      },
+      {
+        path: "projects",
+        component: ProjectsComponent
+      }
+    ]
   },
   {
     path: "projects",

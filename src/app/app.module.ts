@@ -28,6 +28,7 @@ import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
     SharedModule,
     FullscreenModule
   ],
+  exports: [SharedModule],
   providers: [loadingInterceptorProviders],
   bootstrap: [AppComponent]
 })
