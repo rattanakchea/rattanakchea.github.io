@@ -14,7 +14,7 @@ This is my portfolio site built in 2020 using Angular 9.
 
 ## Generate new Module
 
-- e --routing=true
+- ng g module songLyrics --routing=true
 - ng g module algorithmVisualizer --routing=true
 
 ## Generate a component inside a module (case sensitive)
