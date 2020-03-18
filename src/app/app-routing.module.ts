@@ -28,7 +28,7 @@ const routes: Routes = [
       )
   },
   {
-    path: "**",
+    path: "**", //can be moved to defaultModule lazy loading as well
     component: Page404Component
   }
 ];
