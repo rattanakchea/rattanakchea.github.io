@@ -23,7 +23,9 @@ const routes: Routes = [
   {
     path: "apps",
     loadChildren: () =>
-      import("./layouts/default/default.module").then(m => m.DefaultModule)
+      import("./layouts/fullscreen/fullscreen.module").then(
+        m => m.FullscreenModule
+      )
   },
   {
     path: "**",

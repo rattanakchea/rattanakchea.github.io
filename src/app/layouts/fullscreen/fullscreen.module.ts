@@ -10,10 +10,10 @@ const routes: Routes = [
     path: "",
     component: FullscreenComponent,
     children: [
-      {
-        path: "",
-        component: FullscreenComponent
-      },
+      // {
+      //   path: "",
+      //   component: FullscreenComponent
+      // },
       {
         path: "covid19-dashboard",
         component: HomeComponent

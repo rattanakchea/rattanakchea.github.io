@@ -5,7 +5,7 @@ import { SharedModule } from "src/app/shared/shared.module";
 import { RouterModule, Routes } from "@angular/router";
 import { ProjectsComponent } from "src/app/projects/projects.component";
 import { HomeComponent } from "src/app/home/home.component";
-import { LeetcodeReminderComponent } from 'src/app/leetcode-reminder/leetcode-reminder.component';
+import { LeetcodeReminderComponent } from "src/app/leetcode-reminder/leetcode-reminder.component";
 
 const routes: Routes = [
   {
