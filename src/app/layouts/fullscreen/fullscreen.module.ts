@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { FullscreenComponent } from "./fullscreen.component";
 import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
-import { HomeComponent } from "src/app/home/home.component";
+import { IntroductionComponent } from "src/app/shared/introduction/introduction.component";
 
 const routes: Routes = [
   {
@@ -16,7 +16,7 @@ const routes: Routes = [
       // },
       {
         path: "covid19-dashboard",
-        component: HomeComponent
+        component: IntroductionComponent
       }
     ]
   }
