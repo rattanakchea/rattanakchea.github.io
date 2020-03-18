@@ -21,9 +21,17 @@ This is my portfolio site built in 2020 using Angular 9.
 
 - ng g c song-lyrics/home --module song-lyrics.module
 
+## Example
+
+- ng g module layouts/fullscreen
+- ng g c layouts/fullscreen
+
 ## My TODO
 
 - [x] Http interceptor & Loading Service
+- [ ] Layout modules and components
+  - [ ] fullscreen layout for standalone application/project/module per se.
+- [x] Modal / dialogue component
 - [] Angular SharedModule for header, footer components
 - Angular Material Snackbar
 - [] Dark Theme

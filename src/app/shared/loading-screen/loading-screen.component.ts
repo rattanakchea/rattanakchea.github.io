@@ -7,7 +7,7 @@ import {
   ChangeDetectorRef
 } from "@angular/core";
 import { Subscription } from "rxjs";
-import { LoadingScreenService } from "../services/loading-screen/loading-screen.service";
+import { LoadingScreenService } from "../../services/loading-screen/loading-screen.service";
 import { debounceTime } from "rxjs/operators";
 
 @Component({
