@@ -26,7 +26,7 @@ export class LoadingInterceptor implements HttpInterceptor {
     this.activeRequests++;
 
     return next.handle(request).pipe(
-      delay(3000), // use to mimic slow network
+      delay(1000), // use to mimic slow network
       finalize(() => {
         this.activeRequests--;
         if (this.activeRequests === 0) {

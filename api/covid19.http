@@ -1,0 +1,31 @@
+# ----- Resource ----
+# https://github.com/Laeyoung/COVID-19-API
+# https://ainize.ai/laeyoung/wuhan-coronavirus-api
+
+
+@BASE_URI = https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai
+
+### GET summary stat
+GET {{BASE_URI}}/jhu-edu/brief
+Content-Type: application/json
+
+
+### GET latest stat
+GET {{BASE_URI}}/jhu-edu/latest
+Content-Type: application/json
+
+
+### GET time series
+GET {{BASE_URI}}/jhu-edu/timeseries
+Content-Type: application/json
+
+
+### GET time series by Filter by country's iso2 or iso3 code
+GET {{BASE_URI}}/jhu-edu/timeseries
+?iso2=US
+Content-Type: application/json
+
+### GET time series by Make the sum of all the cities or the states in those countries
+GET {{BASE_URI}}/jhu-edu/timeseries
+?onlyCountries=true
+Content-Type: application/json

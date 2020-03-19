@@ -21,6 +21,10 @@ This is my portfolio site built in 2020 using Angular 9.
 
 - ng g c song-lyrics/home --module song-lyrics.module
 
+## generate a service
+
+- ng g s covid19-dashboard/c19
+
 ## Example
 
 - ng g module layouts/fullscreen
