@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+}
+
+.brief {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+}
+
+.brief-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+  //   max-width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 3px;
+
+  .brief-item-label {
+    font-size: 1.1rem;
+  }
+}
+
+.map {
+  height: 500px;
+  width: 70%;
+  border: 1px solid #cecece;
+  margin: 10px;
+}
