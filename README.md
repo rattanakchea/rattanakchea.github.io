@@ -51,6 +51,7 @@ This is my portfolio site built in 2020 using Angular 9.
 
 - HTTP interceptor: https://levelup.gitconnected.com/the-correct-way-to-make-api-requests-in-an-angular-application-22a079fe8413
 - Loading Screen tutorial: https://nezhar.com/blog/create-a-loading-screen-for-angular-apps/
+- Material Icons: https://google.github.io/material-design-icons/
 
 ## Development server
 
