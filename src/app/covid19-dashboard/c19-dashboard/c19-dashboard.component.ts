@@ -13,6 +13,7 @@ export class C19DashboardComponent implements OnInit {
   lng = -73.935242;
 
   markers = [];
+  selectedCountryCode = "US";
 
   ngOnInit(): void {
     this.c19Service.getBrief().subscribe(data => {
@@ -20,9 +21,13 @@ export class C19DashboardComponent implements OnInit {
     });
 
     this.c19Service.getLatest().subscribe(data => {
-      console.log("latest: ", data);
-
       this.markers = data;
     });
+
+    this.c19Service
+      .getTimeSeriesByCountry(this.selectedCountryCode)
+      .subscribe(data => {
+        console.log("time series: ", data);
+      });
   }
 }

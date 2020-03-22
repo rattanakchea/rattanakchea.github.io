@@ -58,28 +58,35 @@
 </section>
 
 <section class="latest">
-  <h3>Map with by countries</h3>
-  <div class="map">
-    <agm-map
-      [fitBounds]="true"
-      [scrollwheel]="true"
-      [zoomControl]="true"
-      [streetViewControl]="false"
-      [zoom]="3"
-      [minZoom]="3"
-      [maxZoom]="6"
-    >
-      <ng-container *ngFor="let marker of markers; let i = index">
-        <agm-marker
-          [latitude]="marker.location.lat"
-          [longitude]="marker.location.lng"
-          animation="DROP"
-          [agmFitBounds]="true"
-          [zIndex]="5"
-          [label]="marker.confirmed"
+  <div class="row">
+    <div class="col-7">
+      <h3>Map with by countries</h3>
+      <div class="map">
+        <agm-map
+          [fitBounds]="true"
+          [scrollwheel]="true"
+          [zoomControl]="true"
+          [streetViewControl]="false"
+          [zoom]="3"
+          [minZoom]="3"
+          [maxZoom]="6"
         >
-        </agm-marker>
-      </ng-container>
-    </agm-map>
+          <ng-container *ngFor="let marker of markers; let i = index">
+            <agm-marker
+              [latitude]="marker.location.lat"
+              [longitude]="marker.location.lng"
+              animation="DROP"
+              [agmFitBounds]="true"
+              [zIndex]="5"
+              [label]="marker.confirmed"
+            >
+            </agm-marker>
+          </ng-container>
+        </agm-map>
+      </div>
+    </div>
+    <div class="col-5">
+      <h3>Chart for {{ this.selectedCountryCode }}</h3>
+    </div>
   </div>
 </section>

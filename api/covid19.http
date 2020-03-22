@@ -27,5 +27,5 @@ Content-Type: application/json
 
 ### GET time series by Make the sum of all the cities or the states in those countries
 GET {{BASE_URI}}/jhu-edu/timeseries
-?onlyCountries=true
+?onlyCountries=true&iso2=US
 Content-Type: application/json

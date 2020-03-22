@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 70%;
+  width: 60%;
 }
 
 .brief-item {
@@ -26,7 +26,6 @@
 }
 
 .map {
-  width: 70%;
   border: 1px solid #cecece;
 
   agm-map {

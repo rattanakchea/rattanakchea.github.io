@@ -26,7 +26,7 @@ export class C19Service {
     return this.httpClient.get(API_ENDPOINTS.latest).pipe(
       map((response: any[]) => {
         return response
-          .filter(item => item.confirmed > 100)
+          .filter(item => item.confirmed > 10)
           .map(item => {
             return {
               location: item.location,
@@ -36,6 +36,12 @@ export class C19Service {
             };
           });
       })
+    );
+  }
+
+  getTimeSeriesByCountry(countryCode = "US") {
+    return this.httpClient.get(
+      API_ENDPOINTS.timeSeries + "?onlyCountries=true&iso2=" + countryCode
     );
   }
 }
