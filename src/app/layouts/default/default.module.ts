@@ -6,7 +6,6 @@ import { RouterModule, Routes } from "@angular/router";
 import { ProjectsComponent } from "src/app/projects/projects.component";
 import { LeetcodeReminderComponent } from "src/app/leetcode-reminder/leetcode-reminder.component";
 import { IntroductionComponent } from "src/app/shared/introduction/introduction.component";
-import { MatTableModule } from "@angular/material/table";
 
 const routes: Routes = [
   {
@@ -32,11 +31,6 @@ const routes: Routes = [
 // default layout for Portfolio site
 @NgModule({
   declarations: [DefaultComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    SharedModule,
-    MatTableModule
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule]
 })
 export class DefaultModule {}

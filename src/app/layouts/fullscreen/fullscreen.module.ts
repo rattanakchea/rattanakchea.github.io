@@ -5,8 +5,13 @@ import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { C19DashboardComponent } from "src/app/covid19-dashboard/c19-dashboard/c19-dashboard.component";
 import { FullscreenHomeComponent } from "./fullscreen-home/fullscreen-home.component";
-import { AgmCoreModule } from "@agm/core";
 import { CaseTableComponent } from "src/app/covid19-dashboard/case-table/case-table.component";
+import { CaseStatisticComponent } from "src/app/covid19-dashboard/case-statistic/case-statistic.component";
+import { MatTableModule } from "@angular/material/table";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { FormsModule } from "@angular/forms";
+import { AgmCoreModule } from "@agm/core";
 
 const routes: Routes = [
   {
@@ -29,7 +34,22 @@ const routes: Routes = [
   }
 ];
 @NgModule({
-  declarations: [FullscreenComponent, FullscreenHomeComponent],
-  imports: [CommonModule, RouterModule.forChild(routes), SharedModule]
+  declarations: [
+    FullscreenComponent,
+    FullscreenHomeComponent,
+    C19DashboardComponent,
+    CaseStatisticComponent,
+    CaseTableComponent
+  ],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    SharedModule,
+    MatTableModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatPaginatorModule,
+    AgmCoreModule
+  ]
 })
 export class FullscreenModule {}
