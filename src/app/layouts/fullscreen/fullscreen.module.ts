@@ -6,6 +6,7 @@ import { SharedModule } from "src/app/shared/shared.module";
 import { C19DashboardComponent } from "src/app/covid19-dashboard/c19-dashboard/c19-dashboard.component";
 import { FullscreenHomeComponent } from "./fullscreen-home/fullscreen-home.component";
 import { AgmCoreModule } from "@agm/core";
+import { CaseTableComponent } from "src/app/covid19-dashboard/case-table/case-table.component";
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: "covid19-dashboard",
         component: C19DashboardComponent
+      },
+      {
+        path: "covid19-countries-table",
+        component: CaseTableComponent
       }
     ]
   }

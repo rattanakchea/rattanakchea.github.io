@@ -13,6 +13,7 @@ import { C19DashboardComponent } from "./covid19-dashboard/c19-dashboard/c19-das
 import { AgmCoreModule } from "@agm/core";
 import { CaseStatisticComponent } from './covid19-dashboard/case-statistic/case-statistic.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CaseTableComponent } from './covid19-dashboard/case-table/case-table.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProjectsComponent,
     LeetcodeReminderComponent,
     C19DashboardComponent,
-    CaseStatisticComponent
+    CaseStatisticComponent,
+    CaseTableComponent
   ],
   imports: [
     BrowserModule,
