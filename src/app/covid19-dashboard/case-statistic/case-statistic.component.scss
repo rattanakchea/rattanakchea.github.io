@@ -1,8 +1,4 @@
 :host {
-  width: 100%;
-}
-
-.world-stat {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -14,20 +10,11 @@
   align-items: center;
   justify-content: center;
   flex: 1 1 0;
-  //   max-width: 250px;
   margin: 10px;
   padding: 10px;
   border-radius: 3px;
 
   .brief-item-label {
     font-size: 1.1rem;
-  }
-}
-
-.map {
-  border: 1px solid #cecece;
-
-  agm-map {
-    height: 600px;
   }
 }

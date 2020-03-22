@@ -11,13 +11,15 @@ import { SharedModule } from "./shared/shared.module";
 import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
 import { C19DashboardComponent } from "./covid19-dashboard/c19-dashboard/c19-dashboard.component";
 import { AgmCoreModule } from "@agm/core";
+import { CaseStatisticComponent } from './covid19-dashboard/case-statistic/case-statistic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     LeetcodeReminderComponent,
-    C19DashboardComponent
+    C19DashboardComponent,
+    CaseStatisticComponent
   ],
   imports: [
     BrowserModule,

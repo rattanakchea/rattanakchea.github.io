@@ -1,66 +1,28 @@
-<section class="header d-flex justify-content-between">
-  <h3>World Wide</h3>
-  <p>Dropdown menu</p>
+<section class="header d-flex justify-content-center">
   <p>Refresh</p>
 </section>
 
 <section class="brief">
-  <div class="brief-item border border-dark mb-3 ">
-    <!-- <span class="material-icons md-36 yellow">
-      confirmation_number
-    </span> -->
-    <span style="margin: 8px; color: #8871E7">
-      <i class="fas fas fa-thermometer-full fa-2x"></i>
-    </span>
-    <div>
-      <h3 class="card-title mb-0">112</h3>
-      <p class="brief-item-label">
-        Confirmed cases
-      </p>
+  <div class="row">
+    <div class="col">
+      <h3 style="width: 100%">World Wide</h3>
+      <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
     </div>
-  </div>
-  <div class="brief-item border border-dark mb-3 ">
-    <span class="material-icons md-36 red">
-      report
-    </span>
-    <div>
-      <h3 class="card-title mb-0">112</h3>
-      <p class="brief-item-label">
-        Death
-      </p>
-    </div>
-  </div>
-  <div class="brief-item border border-dark mb-3 ">
-    <span class="material-icons md-36 green">
-      healing
-    </span>
-    <div>
-      <h3 class="card-title mb-0">112</h3>
-      <p class="brief-item-label">
-        Recovered
-      </p>
-    </div>
-  </div>
-  <div class="brief-item border border-dark mb-3 ">
-    <!-- <span class="material-icons md-36 orange">
-      trending_up
-    </span> -->
-    <span style="margin: 8px; color: #EB7946;">
-      <i class="fas fa-chart-line fa-2x"></i>
-    </span>
-    <div>
-      <h3 class="card-title mb-0">1.5%</h3>
-      <p class="brief-item-label">
-        Mortality Rate
-      </p>
+
+    <div class="col">
+      <div class="d-flex">
+        <h3 class="flex-fill">Country {{ this.selectedCountryCode }}</h3>
+        <p class="flex-fill">Dropdown</p>
+      </div>
+
+      <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
     </div>
   </div>
 </section>
 
 <section class="latest">
   <div class="row">
-    <div class="col-7">
-      <h3>Map with by countries</h3>
+    <div class="col">
       <div class="map">
         <agm-map
           [fitBounds]="true"
@@ -85,8 +47,8 @@
         </agm-map>
       </div>
     </div>
-    <div class="col-5">
-      <h3>Chart for {{ this.selectedCountryCode }}</h3>
+    <div class="col">
+      <h3>Chart</h3>
     </div>
   </div>
 </section>
