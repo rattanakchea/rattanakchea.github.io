@@ -1,12 +1,13 @@
-<section class="wrapper d-flex flex-column justify-content-between">
-  <!-- todo dynamic navigation -->
+<header>
   <app-dynamic-nav [data]="data"></app-dynamic-nav>
+</header>
 
-  <section class="container-fluid d-flex flex-fill" role="main">
+<section class="d-flex flex-column flex-fill">
+  <section class="container-fluid">
     <router-outlet></router-outlet>
   </section>
-
-  <footer class="gradient py-3 w-100 d-flex justify-content-center">
-    <span>Fullscreen Layout</span>
-  </footer>
 </section>
+
+<footer class="gradient py-3 w-100 d-flex justify-content-center">
+  <span>Fullscreen Layout</span>
+</footer>

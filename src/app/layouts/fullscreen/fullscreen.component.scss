@@ -1,10 +1,5 @@
 :host {
-  .wrapper {
-    height: 100%;
-  }
-
-  .content {
-    display: flex;
-    margin-top: 2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
