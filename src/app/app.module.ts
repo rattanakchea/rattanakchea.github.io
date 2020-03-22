@@ -22,7 +22,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FullscreenModule,
     BrowserAnimationsModule
   ],
-  exports: [SharedModule],
+  exports: [SharedModule, FormsModule, BrowserModule],
   providers: [loadingInterceptorProviders],
   bootstrap: [AppComponent]
 })

@@ -7,11 +7,15 @@ import { C19DashboardComponent } from "src/app/covid19-dashboard/c19-dashboard/c
 import { FullscreenHomeComponent } from "./fullscreen-home/fullscreen-home.component";
 import { CaseTableComponent } from "src/app/covid19-dashboard/case-table/case-table.component";
 import { CaseStatisticComponent } from "src/app/covid19-dashboard/case-statistic/case-statistic.component";
+
+import { AgmCoreModule } from "@agm/core";
+
+// material modules
 import { MatTableModule } from "@angular/material/table";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatPaginatorModule } from "@angular/material/paginator";
-import { FormsModule } from "@angular/forms";
-import { AgmCoreModule } from "@agm/core";
+import { MatInputModule } from "@angular/material/input";
+import { MatSortModule } from "@angular/material/sort";
 
 const routes: Routes = [
   {
@@ -46,9 +50,10 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     SharedModule,
     MatTableModule,
-    FormsModule,
     MatFormFieldModule,
     MatPaginatorModule,
+    MatInputModule,
+    MatSortModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
     })
