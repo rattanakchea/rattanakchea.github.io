@@ -1,10 +1,10 @@
-<section class="container header d-flex justify-content-between">
+<section class="header d-flex justify-content-between">
   <h3>World Wide</h3>
   <p>Dropdown menu</p>
   <p>Refresh</p>
 </section>
 
-<section class="container brief">
+<section class="brief">
   <div class="brief-item border border-dark mb-3 ">
     <!-- <span class="material-icons md-36 yellow">
       confirmation_number
@@ -58,8 +58,28 @@
 </section>
 
 <section class="latest">
-  <h2>Map with by countries</h2>
+  <h3>Map with by countries</h3>
   <div class="map">
-    <agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+    <agm-map
+      [fitBounds]="true"
+      [scrollwheel]="true"
+      [zoomControl]="true"
+      [streetViewControl]="false"
+      [zoom]="3"
+      [minZoom]="3"
+      [maxZoom]="6"
+    >
+      <ng-container *ngFor="let marker of markers; let i = index">
+        <agm-marker
+          [latitude]="marker.location.lat"
+          [longitude]="marker.location.lng"
+          animation="DROP"
+          [agmFitBounds]="true"
+          [zIndex]="5"
+          [label]="marker.confirmed"
+        >
+        </agm-marker>
+      </ng-container>
+    </agm-map>
   </div>
 </section>

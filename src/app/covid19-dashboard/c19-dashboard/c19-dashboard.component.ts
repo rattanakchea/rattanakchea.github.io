@@ -12,9 +12,17 @@ export class C19DashboardComponent implements OnInit {
   lat = 40.73061;
   lng = -73.935242;
 
+  markers = [];
+
   ngOnInit(): void {
     this.c19Service.getBrief().subscribe(data => {
       console.log("data", data);
+    });
+
+    this.c19Service.getLatest().subscribe(data => {
+      console.log("latest: ", data);
+
+      this.markers = data;
     });
   }
 }
