@@ -9,7 +9,6 @@ import { loadingInterceptorProviders } from "./interceptors/loading.interceptor"
 import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder.component";
 import { SharedModule } from "./shared/shared.module";
 import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
-import { AgmCoreModule } from "@agm/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
@@ -21,9 +20,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FormsModule,
     SharedModule,
     FullscreenModule,
-    AgmCoreModule.forRoot({
-      apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
-    }),
     BrowserAnimationsModule
   ],
   exports: [SharedModule],

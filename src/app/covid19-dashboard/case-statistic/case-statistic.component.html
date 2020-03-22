@@ -1,52 +1,54 @@
-<div class="brief-item border border-dark mb-3 ">
-  <!-- <span class="material-icons md-36 yellow">
-      confirmation_number
-    </span> -->
-  <span style="margin: 8px; color: #8871E7">
-    <i class="fas fas fa-thermometer-full fa-2x"></i>
-  </span>
-  <div>
-    <h3 class="card-title mb-0">{{ stat.confirmed }}</h3>
-    <p class="brief-item-label">
-      Confirmed cases
-    </p>
+<ng-container *ngIf="stat">
+  <div class="brief-item border border-dark mb-3 ">
+    <!-- <span class="material-icons md-36 yellow">
+        confirmation_number
+      </span> -->
+    <span style="margin: 8px; color: #8871E7">
+      <i class="fas fas fa-thermometer-full fa-2x"></i>
+    </span>
+    <div>
+      <h3 class="card-title mb-0">{{ stat.confirmed }}</h3>
+      <p class="brief-item-label">
+        Confirmed cases
+      </p>
+    </div>
   </div>
-</div>
-<div class="brief-item border border-dark mb-3 ">
-  <span class="material-icons md-36 red">
-    report
-  </span>
-  <div>
-    <h3 class="card-title mb-0">{{ stat.deaths }}</h3>
-    <p class="brief-item-label">
-      Death
-    </p>
+  <div class="brief-item border border-dark mb-3 ">
+    <span class="material-icons md-36 red">
+      report
+    </span>
+    <div>
+      <h3 class="card-title mb-0">{{ stat.deaths }}</h3>
+      <p class="brief-item-label">
+        Death
+      </p>
+    </div>
   </div>
-</div>
-<div class="brief-item border border-dark mb-3 ">
-  <span class="material-icons md-36 green">
-    healing
-  </span>
-  <div>
-    <h3 class="card-title mb-0">{{ stat.recovered }}</h3>
-    <p class="brief-item-label">
-      Recovered
-    </p>
+  <div class="brief-item border border-dark mb-3 ">
+    <span class="material-icons md-36 green">
+      healing
+    </span>
+    <div>
+      <h3 class="card-title mb-0">{{ stat.recovered }}</h3>
+      <p class="brief-item-label">
+        Recovered
+      </p>
+    </div>
   </div>
-</div>
-<div class="brief-item border border-dark mb-3 ">
-  <!-- <span class="material-icons md-36 orange">
-      trending_up
-    </span> -->
-  <span style="margin: 8px; color: #EB7946;">
-    <i class="fas fa-chart-line fa-2x"></i>
-  </span>
-  <div>
-    <h3 class="card-title mb-0">
-      {{ stat.deaths / stat.confirmed | percent }}
-    </h3>
-    <p class="brief-item-label">
-      Mortality Rate
-    </p>
+  <div class="brief-item border border-dark mb-3 ">
+    <!-- <span class="material-icons md-36 orange">
+        trending_up
+      </span> -->
+    <span style="margin: 8px; color: #EB7946;">
+      <i class="fas fa-chart-line fa-2x"></i>
+    </span>
+    <div>
+      <h3 class="card-title mb-0">
+        {{ stat.deaths / stat.confirmed | percent }}
+      </h3>
+      <p class="brief-item-label">
+        Mortality Rate
+      </p>
+    </div>
   </div>
-</div>
+</ng-container>

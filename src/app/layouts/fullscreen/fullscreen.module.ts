@@ -49,7 +49,9 @@ const routes: Routes = [
     FormsModule,
     MatFormFieldModule,
     MatPaginatorModule,
-    AgmCoreModule
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
+    })
   ]
 })
 export class FullscreenModule {}
