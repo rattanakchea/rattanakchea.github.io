@@ -5,6 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { SharedModule } from "src/app/shared/shared.module";
 import { C19DashboardComponent } from "src/app/covid19-dashboard/c19-dashboard/c19-dashboard.component";
 import { FullscreenHomeComponent } from "./fullscreen-home/fullscreen-home.component";
+import { AgmCoreModule } from "@agm/core";
 
 const routes: Routes = [
   {

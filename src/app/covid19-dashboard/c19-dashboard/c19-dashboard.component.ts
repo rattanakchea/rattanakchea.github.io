@@ -9,6 +9,9 @@ import { C19Service } from "../c19.service";
 export class C19DashboardComponent implements OnInit {
   constructor(private c19Service: C19Service) {}
 
+  lat = 40.73061;
+  lng = -73.935242;
+
   ngOnInit(): void {
     this.c19Service.getBrief().subscribe(data => {
       console.log("data", data);

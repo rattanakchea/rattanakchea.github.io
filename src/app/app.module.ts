@@ -10,6 +10,7 @@ import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder
 import { SharedModule } from "./shared/shared.module";
 import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
 import { C19DashboardComponent } from "./covid19-dashboard/c19-dashboard/c19-dashboard.component";
+import { AgmCoreModule } from "@agm/core";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import { C19DashboardComponent } from "./covid19-dashboard/c19-dashboard/c19-das
     HttpClientModule,
     FormsModule,
     SharedModule,
-    FullscreenModule
+    FullscreenModule,
+    AgmCoreModule.forRoot({
+      apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
+    })
   ],
   exports: [SharedModule],
   providers: [loadingInterceptorProviders],
