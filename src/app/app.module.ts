@@ -12,6 +12,7 @@ import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
 import { C19DashboardComponent } from "./covid19-dashboard/c19-dashboard/c19-dashboard.component";
 import { AgmCoreModule } from "@agm/core";
 import { CaseStatisticComponent } from './covid19-dashboard/case-statistic/case-statistic.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CaseStatisticComponent } from './covid19-dashboard/case-statistic/case-
     FullscreenModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
-    })
+    }),
+    BrowserAnimationsModule
   ],
   exports: [SharedModule],
   providers: [loadingInterceptorProviders],
