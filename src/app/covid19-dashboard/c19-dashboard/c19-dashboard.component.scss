@@ -1,26 +1,10 @@
 :host {
   width: 100%;
-}
 
-.world-stat {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.brief-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex: 1 1 0;
-  //   max-width: 250px;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 3px;
-
-  .brief-item-label {
-    font-size: 1.1rem;
+  h1,
+  h2,
+  h3 {
+    margin: 0;
   }
 }
 

@@ -1,11 +1,15 @@
-<section class="header d-flex justify-content-center">
-  <p>Refresh</p>
+<section class="bg-light header d-flex justify-content-center py-3">
+  <span class="text-secondary"
+    >Last updated on: {{ lastUpdatedAt | date: "short" }}</span
+  >
+  &nbsp;&nbsp;
+  <a href>Refresh</a>
 </section>
-
+<br />
 <section class="brief">
   <div class="row">
     <div class="col">
-      <h3 style="width: 100%">World Wide</h3>
+      <h3>Global &nbsp;</h3>
       <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
     </div>
 

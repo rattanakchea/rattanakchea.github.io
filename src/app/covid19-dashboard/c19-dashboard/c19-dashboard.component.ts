@@ -21,8 +21,11 @@ export class C19DashboardComponent implements OnInit {
   markers = [];
   selectedCountryCode = "US";
 
+  lastUpdatedAt: Date;
+
   ngOnInit(): void {
     this.c19Service.getBrief().subscribe((data: I_C19_stat) => {
+      this.lastUpdatedAt = new Date();
       this.worldStat = data;
     });
 
