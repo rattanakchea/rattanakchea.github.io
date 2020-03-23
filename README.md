@@ -30,6 +30,11 @@ This is my portfolio site built in 2020 using Angular 9.
 - ng g module layouts/fullscreen
 - ng g c layouts/fullscreen
 
+## Deployment
+
+- Install ghpages package `ng add angular-cli-ghpages`
+- ng deploy
+
 ## My TODO
 
 - [x] Http interceptor & Loading Service
