@@ -24,7 +24,7 @@
     <div class="col">
       <div class="d-flex">
         <h3 class="flex-fill">Country {{ this.selectedCountryCode }}</h3>
-        <p class="flex-fill">Dropdown</p>
+        <p class="flex-fill m-0">Dropdown</p>
       </div>
 
       <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
@@ -52,7 +52,7 @@
               animation="DROP"
               [agmFitBounds]="true"
               [zIndex]="5"
-              [label]="marker.confirmed"
+              [label]="marker.confirmedStr"
             >
             </agm-marker>
           </ng-container>
