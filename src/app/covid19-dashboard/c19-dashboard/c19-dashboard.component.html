@@ -11,7 +11,6 @@
     >Last updated on: {{ lastUpdatedAt | date: "short" }}</span
   >
   &nbsp;&nbsp;
-  <a href>Refresh</a>
 </section>
 <br />
 <section class="brief">
@@ -24,7 +23,7 @@
     <div class="col">
       <div class="d-flex">
         <h3 class="flex-fill">
-          By Country - <strong> {{ this.selectedCountryCode }}</strong>
+          By Country - <strong> {{ this.selectedMarker.country }}</strong>
         </h3>
       </div>
 
@@ -66,14 +65,12 @@
         <mat-form-field>
           <mat-label>Select a country</mat-label>
           <mat-select
-            [(value)]="selectedCountryCode"
-            (selectionChange)="getTimeSeriesByCountry()"
+            [(value)]="selectedMarker"
+            (selectionChange)="getTimeSeriesByCountry(selectedMarker)"
           >
-            <mat-option
-              *ngFor="let m of markers"
-              [value]="m.countrycode?.iso2"
-              >{{ m.country }}</mat-option
-            >
+            <mat-option *ngFor="let m of markers" [value]="m">{{
+              m.country
+            }}</mat-option>
           </mat-select>
         </mat-form-field>
       </p>

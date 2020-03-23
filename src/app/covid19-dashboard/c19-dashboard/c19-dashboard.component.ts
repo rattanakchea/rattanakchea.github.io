@@ -18,6 +18,10 @@ export class C19DashboardComponent implements OnInit {
   // lng = -73.935242;
 
   selectedCountryCode = "US";
+
+  selectedMarker = {
+    country: "US"
+  };
   worldStat: I_C19_stat;
   countryStat: I_C19_stat;
 
@@ -38,9 +42,14 @@ export class C19DashboardComponent implements OnInit {
     this.getTimeSeriesByCountry();
   }
 
-  getTimeSeriesByCountry() {
+  getTimeSeriesByCountry(marker?) {
+    let countryCode = "US";
+    if (marker) {
+      countryCode = marker.countrycode.iso2 || marker.countrycode.iso3;
+    }
+
     this.c19Service
-      .getTimeSeriesByCountry(this.selectedCountryCode)
+      .getTimeSeriesByCountry(countryCode)
       .subscribe((data: any) => {
         if (data && data[0].timeseries) {
           const times = data[0].timeseries;
