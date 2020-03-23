@@ -25,29 +25,39 @@
     />
   </mat-form-field>
 
-  <div class="mat-elevation-z8" *ngIf="dataSource">
+  <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
       <!-- Rank Column -->
-      <ng-container matColumnDef="id">
+      <ng-container matColumnDef="index">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Rank</th>
-        <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+        <td mat-cell *matCellDef="let row">{{ row.index }}</td>
       </ng-container>
 
-      <!-- Name Column -->
       <ng-container matColumnDef="country">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Country</th>
-        <td mat-cell *matCellDef="let row">{{ row.country }}</td>
+        <td mat-cell *matCellDef="let row">
+          {{ row.country }}
+        </td>
       </ng-container>
 
-      <!-- Progress Column -->
       <ng-container matColumnDef="confirmed">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Confirmed</th>
         <td mat-cell *matCellDef="let row">{{ row.confirmed }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="deaths">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Death</th>
+        <td mat-cell *matCellDef="let row">{{ row.deaths }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="recovered">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Recovered</th>
+        <td mat-cell *matCellDef="let row">{{ row.recovered }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
   </div>
-  <mat-paginator [pageSizeOptions]="[10, 25, 50, 75, 100]"></mat-paginator>
+  <mat-paginator [pageSizeOptions]="[10, 20, 50, 75, 100]"></mat-paginator>
 </section>

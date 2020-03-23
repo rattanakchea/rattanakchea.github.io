@@ -15,7 +15,11 @@ export interface ICountry {
   location: string;
   country: string;
   provincestate: string;
-  confirmed: string;
+  confirmed: number;
+  deaths: number;
+  recovered: number;
+  confirmedStr: string;
+  index?: number;
 }
 
 @Injectable({
@@ -39,7 +43,10 @@ export class C19Service {
               location: item.location,
               country: item.countryregion,
               provincestate: item.provincestate,
-              confirmed: item.confirmed + ""
+              confirmedStr: item.confirmed + "",
+              confirmed: item.confirmed,
+              deaths: item.deaths,
+              recovered: item.recovered
             };
           });
       })

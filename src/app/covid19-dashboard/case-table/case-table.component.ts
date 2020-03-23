@@ -11,17 +11,32 @@ import { C19Service, ICountry } from "../c19.service";
 })
 export class CaseTableComponent implements OnInit, AfterViewInit {
   lastUpdatedAt: Date;
-
-  displayedColumns: string[] = ["id", "country", "confirmed"];
+  displayedColumns: string[] = [
+    "index",
+    "country",
+    "confirmed",
+    "deaths",
+    "recovered"
+  ];
   dataSource: MatTableDataSource<ICountry>;
-
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private c19Service: C19Service) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ngAfterViewInit() {
     this.c19Service.getLatest().subscribe((data: ICountry[]) => {
+      data.sort((a, b) => {
+        return b.confirmed - a.confirmed;
+      });
+
+      data.map((item, index) => {
+        item.index = index + 1;
+        return item;
+      });
+
       // Assign the data to the data source for the table to render
       this.dataSource = new MatTableDataSource(data);
       console.log(
@@ -30,19 +45,17 @@ export class CaseTableComponent implements OnInit, AfterViewInit {
       );
 
       this.dataSource.paginator = this.paginator;
-      this.dataSource.paginator.pageSize = 25;
+      this.dataSource.paginator.pageSize = 20;
       this.dataSource.sort = this.sort;
       this.lastUpdatedAt = new Date();
     });
   }
 
-  ngAfterViewInit() {}
-
   applyFilter(event: Event) {
-    // const filterValue = (event.target as HTMLInputElement).value;
-    // this.dataSource.filter = filterValue.trim().toLowerCase();
-    // if (this.dataSource && this.dataSource.paginator) {
-    //   this.dataSource.paginator.firstPage();
-    // }
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource && this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 }
