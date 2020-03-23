@@ -11,6 +11,13 @@ const API_ENDPOINTS = {
   timeSeries: `${API_BASE_URL}/timeseries`
 };
 
+export interface ICountry {
+  location: string;
+  country: string;
+  provincestate: string;
+  confirmed: string;
+}
+
 @Injectable({
   providedIn: "root"
 })
