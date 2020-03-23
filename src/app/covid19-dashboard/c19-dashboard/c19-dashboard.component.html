@@ -26,7 +26,6 @@
         <h3 class="flex-fill">
           By Country - <strong> {{ this.selectedCountryCode }}</strong>
         </h3>
-        <p class="flex-fill m-0">Dropdown</p>
       </div>
 
       <c19-case-statistic [stat]="countryStat"></c19-case-statistic>
@@ -36,7 +35,8 @@
 
 <section class="latest">
   <div class="row">
-    <div class="col">
+    <!-- hide on small device -->
+    <div class="col d-none d-sm-block">
       <div class="map">
         <agm-map
           [fitBounds]="true"
@@ -62,7 +62,21 @@
       </div>
     </div>
     <div class="col">
-      <h3>Chart</h3>
+      <p class="flex-fill m-0">
+        <mat-form-field>
+          <mat-label>Select a country</mat-label>
+          <mat-select
+            [(value)]="selectedCountryCode"
+            (selectionChange)="getTimeSeriesByCountry()"
+          >
+            <mat-option
+              *ngFor="let m of markers"
+              [value]="m.countrycode?.iso2"
+              >{{ m.country }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </p>
     </div>
   </div>
 </section>

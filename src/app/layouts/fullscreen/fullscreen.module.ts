@@ -16,6 +16,7 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatInputModule } from "@angular/material/input";
 import { MatSortModule } from "@angular/material/sort";
+import { MatSelectModule } from "@angular/material/select";
 
 const routes: Routes = [
   {
@@ -54,6 +55,7 @@ const routes: Routes = [
     MatPaginatorModule,
     MatInputModule,
     MatSortModule,
+    MatSelectModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
     })

@@ -17,11 +17,11 @@ export class C19DashboardComponent implements OnInit {
   // lat = 40.73061;
   // lng = -73.935242;
 
+  selectedCountryCode = "US";
   worldStat: I_C19_stat;
   countryStat: I_C19_stat;
 
   markers = [];
-  selectedCountryCode = "US";
 
   lastUpdatedAt: Date;
 
@@ -35,13 +35,13 @@ export class C19DashboardComponent implements OnInit {
       this.markers = data;
     });
 
+    this.getTimeSeriesByCountry();
+  }
+
+  getTimeSeriesByCountry() {
     this.c19Service
       .getTimeSeriesByCountry(this.selectedCountryCode)
       .subscribe((data: any) => {
-        console.log("time series: ", data);
-
-        // get the last timeserie
-
         if (data && data[0].timeseries) {
           const times = data[0].timeseries;
           let datesArray = Object.keys(times);

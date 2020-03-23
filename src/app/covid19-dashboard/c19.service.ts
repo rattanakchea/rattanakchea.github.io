@@ -14,6 +14,7 @@ const API_ENDPOINTS = {
 export interface ICountry {
   location: string;
   country: string;
+  countrycode: object;
   provincestate: string;
   confirmed: number;
   deaths: number;
@@ -42,6 +43,7 @@ export class C19Service {
             return {
               location: item.location,
               country: item.countryregion,
+              countrycode: item.countrycode,
               provincestate: item.provincestate,
               confirmedStr: item.confirmed + "",
               confirmed: item.confirmed,
