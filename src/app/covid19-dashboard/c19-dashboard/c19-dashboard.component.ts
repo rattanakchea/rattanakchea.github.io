@@ -18,6 +18,8 @@ export class C19DashboardComponent implements OnInit {
   // lng = -73.935242;
 
   worldStat: I_C19_stat;
+  countryStat: I_C19_stat;
+
   markers = [];
   selectedCountryCode = "US";
 
@@ -35,8 +37,23 @@ export class C19DashboardComponent implements OnInit {
 
     this.c19Service
       .getTimeSeriesByCountry(this.selectedCountryCode)
-      .subscribe(data => {
+      .subscribe((data: any) => {
         console.log("time series: ", data);
+
+        // get the last timeserie
+
+        if (data && data[0].timeseries) {
+          const times = data[0].timeseries;
+          let datesArray = Object.keys(times);
+          if (datesArray) {
+            this.countryStat =
+              data[0].timeseries[datesArray[datesArray.length - 1]];
+            console.log(
+              "C19DashboardComponent -> ngOnInit -> this.countryStat",
+              this.countryStat
+            );
+          }
+        }
       });
   }
 }

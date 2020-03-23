@@ -29,7 +29,9 @@
       healing
     </span>
     <div>
-      <h3 class="card-title mb-0">{{ stat.recovered }}</h3>
+      <h3 class="card-title mb-0">
+        {{ !stat.recovered ? "N/A" : stat.recovered }}
+      </h3>
       <p class="brief-item-label">
         Recovered
       </p>

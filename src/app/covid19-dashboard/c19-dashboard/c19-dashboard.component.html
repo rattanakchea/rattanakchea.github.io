@@ -23,11 +23,13 @@
 
     <div class="col">
       <div class="d-flex">
-        <h3 class="flex-fill">Country {{ this.selectedCountryCode }}</h3>
+        <h3 class="flex-fill">
+          By Country - <strong> {{ this.selectedCountryCode }}</strong>
+        </h3>
         <p class="flex-fill m-0">Dropdown</p>
       </div>
 
-      <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
+      <c19-case-statistic [stat]="countryStat"></c19-case-statistic>
     </div>
   </div>
 </section>
