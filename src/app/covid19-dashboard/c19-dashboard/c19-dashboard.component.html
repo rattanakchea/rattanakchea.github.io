@@ -13,21 +13,32 @@
   &nbsp;&nbsp;
 </section>
 <br />
-<section class="brief">
-  <div class="row">
+<section class="summary">
+  <div class="row d-flex align-items-end">
     <div class="col">
-      <h3>Global &nbsp;</h3>
-      <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
-    </div>
-
-    <div class="col">
-      <div class="d-flex">
-        <h3 class="flex-fill">
+      <div class="d-flex align-items-center">
+        <h3 class="mr-3">
           By Country - <strong> {{ this.selectedMarker.country }}</strong>
         </h3>
+        <mat-form-field>
+          <mat-label>Select a country</mat-label>
+          <mat-select
+            [(value)]="selectedMarker"
+            (selectionChange)="getTimeSeriesByCountry(selectedMarker)"
+          >
+            <mat-option *ngFor="let m of markers" [value]="m">{{
+              m.country
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <c19-case-statistic [stat]="countryStat"></c19-case-statistic>
+    </div>
+
+    <div class="col">
+      <h3>Global &nbsp;</h3>
+      <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
     </div>
   </div>
 </section>
@@ -35,7 +46,7 @@
 <section class="latest">
   <div class="row">
     <!-- hide on small device -->
-    <div class="col d-none d-sm-block">
+    <div class="col-12 d-sm-block">
       <div class="map">
         <agm-map
           [fitBounds]="true"
@@ -60,7 +71,7 @@
         </agm-map>
       </div>
     </div>
-    <div class="col">
+    <!-- <div class="col">
       <p class="flex-fill m-0">
         <mat-form-field>
           <mat-label>Select a country</mat-label>
@@ -74,6 +85,6 @@
           </mat-select>
         </mat-form-field>
       </p>
-    </div>
+    </div> -->
   </div>
 </section>
