@@ -6,6 +6,7 @@
     "start": "ng serve --port 4300",
     "start2": "ng serve",
     "build": "ng build",
+    "deploy:gh": "ng deploy --branch=master",
     "deploy:gh-page": "ng deploy --base-href=https://rattanakchea.github.io/rattanak2020/",
     "test": "ng test",
     "lint": "ng lint",

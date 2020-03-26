@@ -81,3 +81,18 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## VS Code
+
+### semantic highlight
+
+```json
+"editor.tokenColorCustomizations": {
+    "semanticHighlighting": true
+  }
+```
+
+### Set editor theme
+
+- install material theme extension
+- `cmd + shift + p` Material Theme set accent color, save the setiting to workspace setting file settings.json
