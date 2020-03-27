@@ -10,6 +10,8 @@ import { LeetcodeReminderComponent } from "./leetcode-reminder/leetcode-reminder
 import { SharedModule } from "./shared/shared.module";
 import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+// leave it for now
+import { MaterialModule } from "./modules/material/material.module";
 
 @NgModule({
   declarations: [AppComponent, ProjectsComponent, LeetcodeReminderComponent],
@@ -20,7 +22,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FormsModule,
     SharedModule,
     FullscreenModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   exports: [SharedModule, FormsModule, BrowserModule],
   providers: [loadingInterceptorProviders],

@@ -11,12 +11,7 @@ import { CaseStatisticComponent } from "src/app/covid19-dashboard/case-statistic
 import { AgmCoreModule } from "@agm/core";
 
 // material modules
-import { MatTableModule } from "@angular/material/table";
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatPaginatorModule } from "@angular/material/paginator";
-import { MatInputModule } from "@angular/material/input";
-import { MatSortModule } from "@angular/material/sort";
-import { MatSelectModule } from "@angular/material/select";
+import { MaterialModule } from "src/app/modules/material/material.module";
 
 const routes: Routes = [
   {
@@ -50,12 +45,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatInputModule,
-    MatSortModule,
-    MatSelectModule,
+    MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
     })
