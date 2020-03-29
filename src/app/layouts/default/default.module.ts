@@ -6,6 +6,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { ProjectsComponent } from "src/app/projects/projects.component";
 import { LeetcodeReminderComponent } from "src/app/leetcode-reminder/leetcode-reminder.component";
 import { IntroductionComponent } from "src/app/shared/introduction/introduction.component";
+import { SongLyricsHomeComponent } from "src/app/song-lyrics/home/home.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: "leetcode-reminder",
         component: LeetcodeReminderComponent
+      },
+      {
+        path: "song-lyrics",
+        component: SongLyricsHomeComponent
       }
     ]
   }
