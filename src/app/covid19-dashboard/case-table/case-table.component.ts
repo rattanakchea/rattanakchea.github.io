@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, AfterViewInit } from "@angular/core";
 import { MatPaginator } from "@angular/material/paginator";
 import { MatSort } from "@angular/material/sort";
 import { MatTableDataSource } from "@angular/material/table";
-import { C19Service, ICountry } from "../c19.service";
+import { C19Service, ICountry } from "../services/ainzine/c19.service";
 
 @Component({
   selector: "app-case-table",

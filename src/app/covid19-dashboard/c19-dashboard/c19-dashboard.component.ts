@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { C19Service } from "../c19.service";
+import { C19Service } from "../services/ainzine/c19.service";
 
 export interface I_C19_stat {
   confirmed: number;
