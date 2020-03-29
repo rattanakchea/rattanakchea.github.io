@@ -47,7 +47,7 @@ const routes: Routes = [
     SharedModule,
     MaterialModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyBNkw4zgUHLhcmXbSPKcoWBIRRCc4nzLuc"
+      apiKey: ""
     })
   ]
 })

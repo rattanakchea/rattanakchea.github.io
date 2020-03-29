@@ -1,7 +1,3 @@
-:host {
-  // width: 100%;
-}
-
 .portfolio {
   display: flex;
   align-items: center;
@@ -11,7 +7,8 @@
     width: 100px;
     height: 100px;
     background-image: url("/assets/img/gravatar.png");
-    background-size: contain;
+    background-size: cover;
+    margin: 20px;
   }
 }
 
