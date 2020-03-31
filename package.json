@@ -1,0 +1,33 @@
+{
+  "name": "rattanak2020",
+  "version": "1.0.0",
+  "description": "fullstack app",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "scripts": {
+    "test": "test",
+    "compile": "node-sass --watch --recursive --output css --source-map true --source-map-contents frontend-static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rattanakchea/rattanak2020.git"
+  },
+  "keywords": [
+    "fullstack",
+    "nodejs",
+    "typescript",
+    "javascript",
+    "angular",
+    "react",
+    "html"
+  ],
+  "author": "rattanak chea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rattanakchea/rattanak2020/issues"
+  },
+  "homepage": "https://github.com/rattanakchea/rattanak2020#readme"
+}
