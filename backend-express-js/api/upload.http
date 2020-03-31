@@ -1,0 +1,35 @@
+# Upload API
+
+@UPLOAD_URI = {{baseUrl}}/{{Upload_Endpoint}}
+
+### Get /upload
+GET {{UPLOAD_URI}}
+
+
+### Post /upload/form, json type
+POST {{UPLOAD_URI}}/form
+content-type: application/json
+
+{
+  "name": "rattanak"
+}
+
+### Post /upload/form, form type Urlencoded
+POST {{UPLOAD_URI}}/form
+content-type: application/x-www-form-urlencoded
+
+name=rattanak&age=30
+
+### Upload a multipart file
+POST {{UPLOAD_URI}}/file
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+Rattanak
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="fileName"; filename="test.md"
+
+< ./test.md
+------WebKitFormBoundary7MA4YWxkTrZu0gW--

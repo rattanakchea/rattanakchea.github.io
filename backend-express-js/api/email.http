@@ -1,0 +1,15 @@
+# Upload API
+
+@EMAIL_URI = {{baseUrl}}/email
+
+
+### send email
+GET {{EMAIL_URI}}/send
+
+### Subscribe to email list
+POST {{EMAIL_URI}}/subscribe
+content-type: application/json
+
+{
+  "email": "rattanak23@gmail.com"
+}

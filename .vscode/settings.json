@@ -25,5 +25,21 @@
     "editor.findMatchBorder": "#84FFFF",
     "selection.background": "#84FFFF40"
   },
-  "materialTheme.accent": "Sky"
+  "materialTheme.accent": "Sky",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "baseUrl": "http://localhost:3000",
+      "Upload_Endpoint": "upload"
+    },
+    "LOCAL": {
+      "baseUrl": "http://localhost:3000"
+    },
+    "STAGE": {
+      "baseUrl": "http://localhost:3000"
+    },
+    "PROD": {
+      "baseUrl": "http://localhost:3000"
+    }
+  },
+  "eslint.enable": true
 }
