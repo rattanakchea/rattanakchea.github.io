@@ -6,3 +6,7 @@
 - Learn backend with TypeScript
 - Learn more backend
 - Data structure with TypeScript
+
+## compile sass
+
+- `node-sass style.scss > style.css`

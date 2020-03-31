@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #e2e8f0;
+}
+button {
+  width: 100%;
+  display: block;
+  background-color: #cedb8f;
+  color: #fff;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 15px 0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+button:hover {
+  background-color: #daea8b;
+}
+h1 {
+  color: #2bb3b1;
+}
+h3 {
+  color: #cedb8f;
+}
+h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+p {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.control-box {
+  max-width: 740px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.main {
+  background-color: #fff;
+  padding: 30px;
+}
+.bg-cyan-dark {
+  background-color: #2bb3b1;
+}
+.bg-cyan-lite {
+  background-color: #4abebd;
+}
+.sub-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sub-box .col {
+  width: 50%;
+  padding: 30px;
+  color: #fff;
+}
+
+.sub-box p {
+  color: hsl(204, 43%, 93%);
+  line-height: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.sub-box .desc {
+  display: flex;
+  align-items: center;
+}
+.sub-box .desc span {
+  line-height: 1.2em;
+}
+.sub-box .desc span:nth-child(1) {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.sub-box .desc span:nth-child(2) {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+  .sub-box .col {
+    width: 100%;
+    padding: 20px;
+  }
+  .control-box {
+    width: calc(100% - 20%);
+  }
+  .main {
+    padding: 20px;
+  }
+}
