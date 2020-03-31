@@ -12,6 +12,8 @@ export class FullscreenComponent implements OnInit {
     navBackground: "gradient-1"
   };
 
+  today = new Date();
+
   constructor() {}
 
   ngOnInit(): void {}

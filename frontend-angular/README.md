@@ -45,6 +45,13 @@ This is my portfolio site built in 2020 using Angular 9.
 - Angular Material Snackbar
 - [] Dark Theme
 
+## Progress
+
+- 03/30:
+  - I moved all existing front-end code into frontend-angular folder. Then I remove node_module folder and reinstall all the package.
+  - Move `gitignore` file into a parent folder and add /`*/node_modules` and `/*/dist`
+  - Run `npm deploy:gh` still works.
+
 ## Internal projects
 
 - Song Lyrics Finder
@@ -100,3 +107,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - install material theme extension
 - `cmd + shift + p` Material Theme set accent color, save the setiting to workspace setting file settings.json
+
