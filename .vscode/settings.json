@@ -41,5 +41,17 @@
       "baseUrl": "http://localhost:3000"
     }
   },
-  "eslint.enable": true
+  "eslint.enable": true,
+  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.includeItems": [
+    "frontend-static/devin-system-design/scss/devin.scss"
+  ],
+  "liveSassCompile.settings.formats": [
+    // This is Default.
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "frontend-static/devin-system-design/"
+    }
+  ]
 }
