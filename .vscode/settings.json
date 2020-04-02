@@ -44,14 +44,14 @@
   "eslint.enable": true,
   "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
   "liveSassCompile.settings.includeItems": [
-    "frontend-static/devin-system-design/scss/devin.scss"
+    "devin-system-design/scss/devin.scss"
   ],
   "liveSassCompile.settings.formats": [
     // This is Default.
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "frontend-static/devin-system-design/"
+      "savePath": "devin-system-design/"
     }
   ],
   "liveServer.settings.port": 5501

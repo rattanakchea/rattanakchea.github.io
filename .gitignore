@@ -48,5 +48,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-frontend-static/devin-system-design/devin.css
-frontend-static/devin-system-design/devin.css.map
+devin-system-design/devin.css
+devin-system-design/devin.css.map
