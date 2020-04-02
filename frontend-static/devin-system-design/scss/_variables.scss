@@ -1,0 +1,67 @@
+// Typography
+$font-family: Poppins,
+sans-serif;
+$bold: 700 !default;
+$semibold: 600 !default;
+$normal: 500 !default;
+$light: 300 !default;
+// Spacing
+$p1: 1rem;
+$p2: 2rem;
+$p3: 3rem;
+$p4: 4rem;
+$p5: 5rem;
+$m1: 1rem;
+$m2: 2rem;
+$m3: 3rem;
+$m4: 4rem;
+$m5: 5rem;
+
+//Img
+$logo-height: 46px;
+
+// Colors
+$text-color: #2c3038;
+$text-light: #696974;
+$text-grey: #828d9a;
+$link-color: #000;
+$link-hover: #0062ff;
+$bg: #fdfdff;
+$white: #fff;
+$black: #000;
+$blue: #0062ff;
+$blue-dark: #0e47ba;
+$blue-light: #e5efff;
+$blue-border: #b9d3fd;
+$green: #3dd599;
+$green-light: #d9f6ea;
+$yellow: #ffc541;
+$yellow-light: #fff3db;
+$red: #fc5a5a;
+$red-light: #fee7e6;
+$danger: #dc3445;
+$success: #27a645;
+$success-light: #e9f6ec;
+$footer: #051b35;
+$grey-light: #b4bbc2;
+$grey: grey;
+
+// Border Radius
+$border-radius: 1rem;
+$btn-border-radius: 0.4rem;
+
+// Padding
+$padding: 20px;
+// Transitions
+
+$ease: all 0.16s ease-in-out;
+
+// Box Shadow
+$box-shadow-nav: rgba(0, 12, 32, 0.04) 0px 0px 1px 0px,
+rgba(10, 31, 68, 0.06) 0px 10px 16px 0px;
+$box-shadow-card: rgba(89, 93, 97, 0.05) 0 3px 0,
+rgba(94, 99, 104, 0.12) 0 4px 8px,
+rgba(90, 97, 105, 0.06) 0 10px 10px,
+rgba(90, 97, 105, 0.1) 0 7px 70px;
+$box-shadow-btn: 0 6px 4px 0 rgba(0, 0, 0, 0.15);
+
