@@ -6,6 +6,7 @@
 - Learn backend with TypeScript
 - Learn more backend
 - Data structure with TypeScript
+- Get design style guide from Tania: https://github.com/taniarascia/primitive
 
 ## compile sass
 
