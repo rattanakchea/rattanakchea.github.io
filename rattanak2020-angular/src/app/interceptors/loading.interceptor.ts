@@ -7,7 +7,7 @@ import {
   HTTP_INTERCEPTORS
 } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { LoadingScreenService } from "../services/loading-screen/loading-screen.service";
+import { LoadingScreenService } from "../shared/loading-screen/loading-screen.service";
 import { finalize, delay } from "rxjs/operators";
 
 @Injectable()
