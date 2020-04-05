@@ -12,11 +12,11 @@ const commonComponents = [
   IntroductionComponent,
   Page404Component,
   LoadingScreenComponent,
-  DynamicNavComponent
+  DynamicNavComponent,
 ];
 @NgModule({
   declarations: [...commonComponents],
   imports: [CommonModule, RouterModule],
-  exports: [RouterModule, ...commonComponents]
+  exports: [RouterModule, ...commonComponents],
 })
 export class SharedModule {}

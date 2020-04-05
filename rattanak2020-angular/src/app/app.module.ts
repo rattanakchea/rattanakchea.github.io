@@ -23,10 +23,10 @@ import { MaterialModule } from "./modules/material/material.module";
     SharedModule,
     FullscreenModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   exports: [SharedModule, FormsModule, BrowserModule],
   providers: [loadingInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
