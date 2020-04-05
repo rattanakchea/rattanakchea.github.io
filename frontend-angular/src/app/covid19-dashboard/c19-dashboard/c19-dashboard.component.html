@@ -1,15 +1,9 @@
 <section class="bg-light header d-flex justify-content-start py-3">
   <span>
-    <a style="margin-right: 25px" routerLink="../covid19-dashboard"
-      >Dashboard</a
-    >
-    <a style="margin-right: 25px" routerLink="../covid19-countries-table"
-      >Risk Table</a
-    >
+    <a style="margin-right: 25px" routerLink="../covid19-dashboard">Dashboard</a>
+    <a style="margin-right: 25px" routerLink="../covid19-countries-table">Risk Table</a>
   </span>
-  <span class="text-secondary"
-    >Last updated on: {{ lastUpdatedAt | date: "short" }}</span
-  >
+  <span class="text-secondary">Last updated on: {{ lastUpdatedAt | date: "short" }}</span>
   &nbsp;&nbsp;
 </section>
 <br />
@@ -22,10 +16,7 @@
         </h3>
         <mat-form-field>
           <mat-label>Select a country</mat-label>
-          <mat-select
-            [(value)]="selectedMarker"
-            (selectionChange)="getTimeSeriesByCountry(selectedMarker)"
-          >
+          <mat-select [(value)]="selectedMarker" (selectionChange)="getTimeSeriesByCountry(selectedMarker)">
             <mat-option *ngFor="let m of markers" [value]="m">{{
               m.country
             }}</mat-option>
@@ -40,51 +31,5 @@
       <h3>Global &nbsp;</h3>
       <c19-case-statistic [stat]="worldStat"></c19-case-statistic>
     </div>
-  </div>
-</section>
-
-<section class="latest">
-  <div class="row">
-    <!-- hide on small device -->
-    <div class="col-12 d-sm-block">
-      <div class="map">
-        <agm-map
-          [fitBounds]="true"
-          [scrollwheel]="true"
-          [zoomControl]="true"
-          [streetViewControl]="false"
-          [zoom]="3"
-          [minZoom]="3"
-          [maxZoom]="6"
-        >
-          <ng-container *ngFor="let marker of markers; let i = index">
-            <agm-marker
-              [latitude]="marker.location.lat"
-              [longitude]="marker.location.lng"
-              animation="DROP"
-              [agmFitBounds]="true"
-              [zIndex]="5"
-              [label]="marker.confirmedStr"
-            >
-            </agm-marker>
-          </ng-container>
-        </agm-map>
-      </div>
-    </div>
-    <!-- <div class="col">
-      <p class="flex-fill m-0">
-        <mat-form-field>
-          <mat-label>Select a country</mat-label>
-          <mat-select
-            [(value)]="selectedMarker"
-            (selectionChange)="getTimeSeriesByCountry(selectedMarker)"
-          >
-            <mat-option *ngFor="let m of markers" [value]="m">{{
-              m.country
-            }}</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </p>
-    </div> -->
   </div>
 </section>

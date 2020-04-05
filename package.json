@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "test",
-    "compile": "node-sass --watch --recursive --output css --source-map true --source-map-contents frontend-static"
+    "compileb": "node-sass --watch --recursive --output css --source-map true --source-map-contents frontend-static"
   },
   "repository": {
     "type": "git",

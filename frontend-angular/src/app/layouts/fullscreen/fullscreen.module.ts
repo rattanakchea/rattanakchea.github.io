@@ -8,8 +8,6 @@ import { FullscreenHomeComponent } from "./fullscreen-home/fullscreen-home.compo
 import { CaseTableComponent } from "src/app/covid19-dashboard/case-table/case-table.component";
 import { CaseStatisticComponent } from "src/app/covid19-dashboard/case-statistic/case-statistic.component";
 
-import { AgmCoreModule } from "@agm/core";
-
 // material modules
 import { MaterialModule } from "src/app/modules/material/material.module";
 
@@ -20,18 +18,18 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        component: FullscreenHomeComponent
+        component: FullscreenHomeComponent,
       },
       {
         path: "covid19-dashboard",
-        component: C19DashboardComponent
+        component: C19DashboardComponent,
       },
       {
         path: "covid19-countries-table",
-        component: CaseTableComponent
-      }
-    ]
-  }
+        component: CaseTableComponent,
+      },
+    ],
+  },
 ];
 @NgModule({
   declarations: [
@@ -39,16 +37,13 @@ const routes: Routes = [
     FullscreenHomeComponent,
     C19DashboardComponent,
     CaseStatisticComponent,
-    CaseTableComponent
+    CaseTableComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
     MaterialModule,
-    AgmCoreModule.forRoot({
-      apiKey: ""
-    })
-  ]
+  ],
 })
 export class FullscreenModule {}
