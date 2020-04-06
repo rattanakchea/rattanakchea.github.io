@@ -20,19 +20,27 @@ export class LeetcodeReminderComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    this.dialogService.openDialog();
-
     console.log("You submitted: ", this.email);
     const subscribeURI =
       environment.rootUrl +
       environment.emailAPI.basePath +
       environment.emailAPI.subscribe;
 
-    return this.http
-      .post(subscribeURI, { email: this.email })
-      .subscribe((data: any) => {
+    return this.http.post(subscribeURI, { email: this.email }).subscribe(
+      (data: any) => {
         this.result = data.status;
         this.email = "";
-      });
+      },
+      (error) => {
+        const data = {
+          title: "Server Error",
+          text:
+            "We apology we were unable add your email to subscription at this time.",
+        };
+        this.dialogService.openDialog(data);
+
+        // TODO use an toast might be better option
+      }
+    );
   }
 }

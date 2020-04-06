@@ -12,6 +12,7 @@ import { FullscreenModule } from "./layouts/fullscreen/fullscreen.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // leave it for now
 import { MaterialModule } from "./modules/material/material.module";
+import { DialogModule } from "./modules/dialog/dialog.module";
 
 @NgModule({
   declarations: [AppComponent, ProjectsComponent, LeetcodeReminderComponent],
@@ -24,6 +25,7 @@ import { MaterialModule } from "./modules/material/material.module";
     FullscreenModule,
     BrowserAnimationsModule,
     MaterialModule,
+    DialogModule,
   ],
   exports: [SharedModule, FormsModule, BrowserModule],
   providers: [loadingInterceptorProviders],

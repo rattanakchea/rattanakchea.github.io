@@ -10,9 +10,10 @@ import { MatDialog } from "@angular/material/dialog";
 export class DialogService {
   constructor(public dialog: MatDialog) {}
 
-  openDialog(): void {
+  openDialog(data): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: "30%",
+      data: data,
     });
 
     dialogRef.afterClosed().subscribe((result) => {

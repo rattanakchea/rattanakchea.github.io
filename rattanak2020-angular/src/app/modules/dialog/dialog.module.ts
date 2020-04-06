@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { DialogComponent } from "./dialog/dialog.component";
-import { MatDialogModule } from "@angular/material/dialog";
-
+import { MatButtonModule } from "@angular/material/button";
+import { MaterialModule } from "../material/material.module";
 // dialog module that is reuseable
 
 @NgModule({
   declarations: [DialogComponent],
-  imports: [CommonModule, MatDialogModule],
+  imports: [MatButtonModule],
+  exports: [],
 })
 export class DialogModule {}

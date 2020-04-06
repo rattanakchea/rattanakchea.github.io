@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 
 // material modules
 import { MatTableModule } from "@angular/material/table";
@@ -9,6 +8,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSortModule } from "@angular/material/sort";
 import { MatSelectModule } from "@angular/material/select";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatButtonModule } from "@angular/material/button";
 
 const materialModules = [
   MatTableModule,
@@ -17,12 +17,13 @@ const materialModules = [
   MatInputModule,
   MatSortModule,
   MatSelectModule,
-  MatDialogModule
+  MatDialogModule,
+  MatButtonModule,
 ];
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ...materialModules],
+  imports: [...materialModules],
   exports: [...materialModules],
 })
 export class MaterialModule {}
