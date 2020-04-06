@@ -3,6 +3,6 @@
     <p>What's your favorite animal?</p>
 </div>
 <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">No Thanks</button>
-    <button mat-button [mat-dialog-close]="" cdkFocusInitial>Ok</button>
+    <button mat-button (click)="onNoClick(null)">Cancel</button>
+    <button mat-button mat-dialog-close="OK" cdkFocusInitial>Ok</button>
 </div>
