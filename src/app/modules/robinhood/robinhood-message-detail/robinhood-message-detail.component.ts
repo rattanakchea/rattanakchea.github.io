@@ -1,9 +1,9 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: "app-robinhood-message-detail",
-  templateUrl: "./robinhood-message-detail.component.html",
-  styleUrls: ["./robinhood-message-detail.component.scss"],
+  selector: 'app-robinhood-message-detail',
+  templateUrl: './robinhood-message-detail.component.html',
+  styleUrls: ['./robinhood-message-detail.component.scss'],
 })
 export class RobinhoodMessageDetailComponent implements OnInit, AfterViewInit {
   constructor() {}
@@ -12,8 +12,8 @@ export class RobinhoodMessageDetailComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     // Scroll to the bottom
-    document.querySelector("#bottom").scrollIntoView({
-      behavior: "smooth",
+    document.querySelector('#bottom')?.scrollIntoView({
+      behavior: 'smooth',
     });
   }
 }
