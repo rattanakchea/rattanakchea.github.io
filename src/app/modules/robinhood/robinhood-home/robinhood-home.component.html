@@ -1,0 +1,167 @@
+<mat-drawer-container class="w-100 h-100" hasBackdrop="true">
+    <!-- backdrop: unset, true, false -->
+    <!-- mode: side, over, push -->
+    <mat-drawer #drawer mode="over" style="width: 275px" position="end" disableClose="false" class="bg-secondary">
+        <!-- TODO make the setting a collapsible sidebar -->
+        <!-- https://v5.getbootstrap.com/docs/5.0/examples/offcanvas/# -->
+        <!-- responsive sidenav -->
+        <!-- https://stackblitz.com/angular/onmxvyxqmdv?file=src%2Fapp%2Fsidenav-responsive-example.html -->
+        <!-- Settings -->
+        <div class="bg-secondary px-3">
+            <h2 class="my-2">Settings</h2>
+            <div class="color-themes mt-3">
+                <h3>Color Themes</h3>
+                <div class="theme  bg-light">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="radio" name="theme" id="light" checked
+                            (change)="changeTheme('light')">
+                        <label class="form-check-label px-3" for="light">
+                            Light
+                        </label>
+                        <span class="color-circle rounded-circle bg-white border"></span>
+
+                    </div>
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="radio" name="theme" id="dark"
+                            (change)="changeTheme('dark')">
+                        <label class="form-check-label px-3" for="dark">
+                            Dark
+                        </label>
+                        <span class="color-circle rounded-circle bg-dark border"></span>
+                    </div>
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="radio" name="theme" id="dark">
+                        <label class="form-check-label px-3" for="dark">
+                            Market
+                        </label>
+                        <span class="market color-circle rounded-circle border"></span>
+                    </div>
+                </div>
+
+                <h3>Font Icons</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked
+                        [(ngModel)]="uiState.iconKey" value="material">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Material Icons
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                        [(ngModel)]="uiState.iconKey" value="fa">
+                    <label class="form-check-label" for="flexRadioDefault2" value="fa">
+                        Font Awesome Icons
+                    </label>
+                </div>
+
+                <h3 class="mt-4">Font Family</h3>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="font" id="roboto" checked value="roboto"
+                        [(ngModel)]="selectedFont" (change)="changeFont(selectedFont)">
+                    <label class="form-check-label" for="roboto">
+                        Roboto
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="font" id="sora" value="sora"
+                        [(ngModel)]="selectedFont" (change)="changeFont(selectedFont)">
+                    <label class="form-check-label" for="sora">
+                        Sora
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="font" id="sans-serif" value="sans-serif"
+                        [(ngModel)]="selectedFont" (change)="changeFont(selectedFont)">
+                    <label class="form-check-label" for="sans-serif">
+                        Sans Serif
+                    </label>
+                </div>
+
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div id="robinhood" class="d-flex flex-column h-100">
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom shadow">
+                <div class="container">
+                    <h1>Robinhood UI Demo</h1>
+                    <button mat-raised-button (click)="drawer.toggle()">Toggle Setting</button>
+                </div>
+            </nav>
+
+            <div class="container-fluid flex-grow-1">
+                <div class="row h-100">
+                    <!-- col, device <= 576px, full width -->
+                    <!-- col-sm-7, device >= 576px -->
+                    <!-- col-md-8, device >= 768px, ipad and up -->
+                    <div class="col-sm-7 col-md-8 col p-0">
+                        <main class="content mt-4">
+
+                            <!-- The app frame -->
+                            <section id="app-frame" class="shadow rounded position-relative">
+                                <main class="content bg-white" id="main">
+                                    <router-outlet></router-outlet>
+                                </main>
+
+                                <!-- sticky button navigation -->
+                                <footer class="nav w-100 bg-white" *ngIf="uiState.iconKey === 'material'">
+                                    <a class="btn" routerLink="./">
+                                        <mat-icon class="green-icon" aria-hidden="false" aria-label="home"
+                                            color="primary">
+                                            {{currentIcons.home}}</mat-icon>
+                                    </a>
+                                    <a class="btn" routerLink="./balance">
+                                        <mat-icon aria-hidden="false" aria-label="scan" color="primary">
+                                            {{currentIcons.balance}}
+                                        </mat-icon>
+                                    </a>
+                                    <a class="btn" routerLink="./search">
+                                        <mat-icon aria-hidden="false" aria-label="order" color="primary">
+                                            {{currentIcons.search}}
+                                        </mat-icon>
+                                    </a>
+                                    <a class="btn" routerLink="./messages">
+                                        <mat-icon aria-hidden="false" aria-label="gift" color="primary">
+                                            {{currentIcons.messages}}
+                                        </mat-icon>
+                                    </a>
+                                    <a class="btn" routerLink="./account">
+                                        <mat-icon aria-hidden="false" aria-label="store" color="primary">
+                                            {{currentIcons.setting}}
+                                        </mat-icon>
+                                    </a>
+                                </footer>
+
+                                <footer class="nav w-100 bg-white" *ngIf="uiState.iconKey === 'fa'">
+                                    <!-- fa + s:solid, r:regular -->
+                                    <!-- this does not work key order by alphabet -->
+                                    <!-- <ng-container *ngFor="let icon of currentIcons | keyvalue">
+                                    <a class="btn" routerLink="./{{icon.key}}">
+                                        <i class="fas {{icon.value}}"></i>
+                                    </a>
+                                </ng-container> -->
+                                    <a class="btn" routerLink="./">
+                                        <i class="fas {{currentIcons.home}}"></i>
+                                    </a>
+                                    <a class="btn" routerLink="./balance">
+                                        <i class="fas {{currentIcons.balance}}"></i>
+                                    </a>
+                                    <a class="btn" routerLink="./search">
+                                        <i class="fas {{currentIcons.search}}"></i>
+                                    </a>
+                                    <a class="btn" routerLink="./messages">
+                                        <i class="far {{currentIcons.messages}}"></i>
+                                    </a>
+                                    <a class="btn" routerLink="./account">
+                                        <i class="far {{currentIcons.setting}}"></i>
+                                    </a>
+                                </footer>
+                            </section>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>

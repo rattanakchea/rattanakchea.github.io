@@ -1,0 +1,87 @@
+@import "../robinhood";
+
+:host {
+  display: block;
+  --colorTextBlack: rgba(0, 0, 0, 0.87);
+  --colorTextBlackSoft: rgba(0, 0, 0, 0.56);
+  --colorTextWhite: rgba(255, 255, 255, 1);
+  --colorTextWhiteSoft: rgba(211, 211, 211, 0.7);
+}
+
+#app-frame {
+  max-width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: var(--colorTextBlack);
+  border: 0.2px dotted var(--colorTextWhiteSoft);
+
+  header {
+    flex-shrink: 0;
+  }
+
+  main.content {
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: none; //firefox
+
+    // hide scrollbar - chrome
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // *1 dont need sticky because flex-grow: 1 on main-content make footer stay on the bottom already
+  footer.nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+    // box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 -5px 5px -5px #999;
+    z-index: 999;
+
+    a.btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    mat-icon {
+      // color: #222;
+    }
+  }
+}
+
+// Settings
+.theme {
+  margin: 1rem 0;
+  background-color: white;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  padding: 1rem;
+
+  .color {
+    width: 100px;
+  }
+
+  .color-circle {
+    width: 25px;
+    height: 25px;
+    background-color: #cfcfcf;
+    display: inline-block;
+  }
+
+  .market {
+    background: linear-gradient(
+      -45deg,
+      black,
+      black 49%,
+      white 49%,
+      white 51%,
+      white 51%
+    );
+  }
+}

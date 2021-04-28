@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  h3 {
+    margin: 0;
+  }
+
+  .message {
+    padding: 0.5rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .body {
+    width: 75%;
+  }
+
+  .color-circle {
+    width: 47px;
+    height: 47px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

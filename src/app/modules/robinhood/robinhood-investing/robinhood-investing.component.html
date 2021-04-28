@@ -1,0 +1,149 @@
+<header class="sticky-header position-sticky bg-white p-3" style="top:0; z-index: 1;">
+    <div class="row">
+        <div class="col">
+            <h1>Investing</h1>
+            <h1>$23,191.55</h1>
+        </div>
+
+        <div class="col text-right text-white ">
+            <span class="bg-success rounded-pill p-2 d-inline-flex align-content-center">
+                <span class="material-icons pr-1" style="line-height: 1rem; font-size: 18px">
+                    card_giftcard
+                </span>
+                <span>
+                    Free Stock
+                </span>
+            </span>
+        </div>
+    </div>
+</header>
+
+<!-- main body content -->
+<main class="px-2">
+
+    <section class="position-relative p-2">
+        <p class="d-flex">
+            <span class="material-icons text-green">
+                call_made
+            </span>
+            <span class="text-green pr-1">
+                $230.99 (0.4%)
+            </span>
+            <span>Today</span>
+        </p>
+        <p class="d-flex">
+            <span class="material-icons text-danger" style="transform: rotate(-90deg);">
+                call_received
+            </span>
+            <span class="text-danger pr-1">
+                $10.22 (0.02%)
+            </span>
+            <span>After-Hours</span>
+        </p>
+    </section>
+
+    <section class="graph my-2 box shadow rounded py-3">
+        <app-chart></app-chart>
+    </section>
+
+    <section class="news-highlight box shadow rounded-lg p-3 position-relative">
+        <!-- <span class="bg-success badge rounded-circle"
+            style="position: absolute; right: 5px; top: 5px;font-size: .85rem;">3</span>
+        <p class="text-muted">Bloomberg 5h</p>
+        <p>Facebook Office Outside Seattle Put Up for Sale by Developer</p>
+        <a href="#" class="text-danger">VIEW ARTICLE</a> -->
+
+        <div class="slider">
+            <div class="slides">
+                <div id="slide-1">
+                    <span class="bg-success badge rounded-circle"
+                        style="position: absolute; right: 5px; top: 5px;font-size: .85rem;">3</span>
+                    <p class="text-muted">Bloomberg 5h</p>
+                    <p>Facebook Office Outside Seattle Put Up for Sale by Developer</p>
+                    <a class="link text-success">VIEW ARTICLE</a>
+                </div>
+                <div id="slide-2">
+                    <span class="bg-success badge rounded-circle"
+                        style="position: absolute; right: 5px; top: 5px;font-size: .85rem;">3</span>
+                    <p class="text-muted">CNBC 6h</p>
+                    <p>Google to launch Pixel 5 in November 2020</p>
+                    <a class="link text-success">VIEW ARTICLE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stocks-list mt-3 p-2">
+        <h2>Stocks</h2>
+        <div class="row list-item d-flex align-items-center">
+            <div class="col-4">
+                <p>MSFT</p>
+                <p class="text-muted">5 shares</p>
+            </div>
+            <div class="col-4">
+                <app-chart config="green"></app-chart>
+            </div>
+
+            <div class="col-4 text-right">
+                <h3 class="text-success">+2.3%</h3>
+            </div>
+        </div>
+
+        <div class="row list-item d-flex align-items-center">
+            <div class="col-4">
+                <p>AAPL</p>
+                <p class="text-muted">5 shares</p>
+            </div>
+            <div class="col-4">
+                <app-chart config="red"></app-chart>
+            </div>
+            <div class="col-4 text-right">
+                <h3 class="text-danger">-0.4%</h3>
+            </div>
+        </div>
+
+        <div class="row list-item d-flex align-items-center">
+            <div class="col-4">
+                <p>AMZN</p>
+                <p class="text-muted">1.1 shares</p>
+            </div>
+            <div class="col-4">
+                <app-chart config="green"></app-chart>
+            </div>
+
+            <div class="col-4 text-right">
+                <h3 class="text-success">+1.7%</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="stocks-list p-2">
+        <h2>Watch List</h2>
+        <div class="row list-item d-flex align-items-center">
+            <div class="col-4">
+                <p>AMZN</p>
+                <p class="text-muted">1.1 shares</p>
+            </div>
+            <div class="col-4">
+                <app-chart config="green"></app-chart>
+            </div>
+
+            <div class="col-4 text-right">
+                <h3 class="text-success">+1.7%</h3>
+            </div>
+        </div>
+        <div class="row list-item d-flex align-items-center">
+            <div class="col-4">
+                <p>TSLA</p>
+                <p class="text-muted">Tesla</p>
+            </div>
+            <div class="col-4">
+                <app-chart config="green"></app-chart>
+            </div>
+
+            <div class="col-4 text-right">
+                <h3 class="text-success">+3.5%</h3>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,32 @@
+<section class="balance-transfer p-3">
+
+    <div class="align-content-center d-flex">
+        <mat-icon class="material-icons mr-4" routerLink="../">
+            arrow_back
+        </mat-icon>
+        <h3 class="mb-0">Enter Amount</h3>
+    </div>
+
+    <div class="row my-3">
+        <div class="col-9">
+            <p>
+                <label for="from" class="pr-2">From</label>
+                <span>Market Saving Bank -2312</span>
+            </p>
+        </div>
+        <div class="col-3">
+            <a class="text-success text-right">Change</a>
+        </div>
+    </div>
+
+    <form action="">
+        <!-- TODO ngModel money -->
+        <input type="number" placeholder="0">
+    </form>
+
+    <div class="d-flex btn-group my-3" role="group">
+        <button type="button" class="text-success btn btn-secondary">{{ 1000 | currency:'USD' }}</button>
+        <button type="button" class="text-success btn btn-secondary">{{ 2500 | currency:'USD' }}</button>
+        <button type="button" class="text-success btn btn-secondary">{{ 5000 | currency:'USD' }}</button>
+    </div>
+</section>

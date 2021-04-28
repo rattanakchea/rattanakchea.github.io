@@ -1,0 +1,183 @@
+// robinhood styles
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sora&family=Source+Sans+Pro&display=swap");
+
+// make sure it does not depend on other CSS
+@import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+#robinhood {
+  font-family: "Roboto";
+
+  p {
+    font-family: sans-serif;
+    margin-bottom: 0;
+  }
+
+  // be careful of using font on span, as it could affect material icons
+  a {
+    text-decoration: none;
+  }
+
+  header.sticky-header {
+    h1 {
+      margin: 0;
+    }
+
+    &.shadow {
+      h1 {
+        font-size: 1.1rem;
+        line-height: 1.25rem;
+      }
+    }
+  }
+}
+
+/* dynamic font */
+#app-frame[data-font="sora"] {
+  font-family: "sora", sans-serif !important;
+
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: "sora", sans-serif !important;
+  }
+}
+
+#app-frame[data-font="sans-serif"] {
+  font-family: sans-serif !important;
+
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: sans-serif !important;
+  }
+}
+
+/* Dark Mode */
+$dark: #121212;
+$dark-light: rgb(39, 38, 38);
+$light: white;
+
+// override bootstrap css class
+#app-frame[data-theme="dark"] {
+  // this one line can replace all styles below
+  filter: invert(1) hue-rotate(180deg);
+
+  // background-color: $dark !important;
+  // color: $light;
+
+  // .bg-light {
+  //   background-color: #333 !important;
+  // }
+
+  // .bg-secondary {
+  //   background-color: $dark-light !important;
+  // }
+
+  // .bg-white {
+  //   background-color: $dark-light !important;
+  // }
+
+  // .bg-black {
+  //   background-color: $light !important;
+  // }
+
+  // .card {
+  //   background-color: $dark-light !important;
+  //   border-color: $light;
+  // }
+
+  // .graph,
+  // .news-highlight {
+  //   background-color: $dark-light !important;
+  // }
+
+  // .fa,
+  // .fas,
+  // .far {
+  //   color: white;
+  // }
+}
+
+// content place holder
+// https://jsfiddle.net/codepicky/ygo7hzru/42/
+
+.box-placeholder {
+  // display: inline-block;
+  // background-color: #fff;
+  // box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  // vertical-align: top;
+  width: 100%;
+}
+
+.category {
+  display: block;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.box-placeholder {
+  font-size: 0;
+  line-height: 0;
+
+  .text {
+    display: inline-block;
+    background-color: #444;
+    height: 12px;
+    border-radius: 100px;
+    margin: 5px 0;
+    min-width: 100px;
+    opacity: 0.1;
+    // animation: fading 1.5s infinite;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.link {
+      background-color: var(--blue);
+      opacity: 0.4;
+    }
+
+    &.line {
+      width: 100%;
+    }
+
+    &.category {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  }
+
+  h4.text {
+    height: 20px;
+    margin: 3px 0;
+    opacity: 0.2;
+  }
+
+  .image {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
