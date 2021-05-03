@@ -125,6 +125,10 @@
               "devServerTarget": "rattanak2021:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
