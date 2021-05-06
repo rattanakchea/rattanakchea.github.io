@@ -23,6 +23,10 @@ const routes: Routes = [
     //   },
     // ],
   },
+  {
+    path: 'projects',
+    component: HomepageComponent,
+  },
 ];
 
 const commonComponents = [NavigationComponent, IntroductionComponent];
