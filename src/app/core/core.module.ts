@@ -6,8 +6,10 @@ import { IntroductionComponent } from './components/introduction/introduction.co
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
+import { SharedModule } from '../shared/shared.module';
 // import { LoadingScreenComponent } from "./loading-screen/loading-screen.component";
 // import { DynamicNavComponent } from "./dynamic-nav/dynamic-nav.component";
+
 
 const routes: Routes = [
   {
@@ -28,10 +30,7 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
   },
-  {
-    path: '**',
-    component: Page404Component,
-  },
+ 
 ];
 
 const commonComponents = [
@@ -43,7 +42,7 @@ const commonComponents = [
 ];
 @NgModule({
   declarations: [...commonComponents],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule, ...commonComponents],
 })
 export class CoreModule {}

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { LoadingScreenComponent } from './components/loading-screen/loading-screen.component';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 // import { NavigationComponent } from "./navigation/navigation.component";
 // import { Page404Component } from "./page404/page404.component";
@@ -10,8 +11,8 @@ import { LoadingScreenComponent } from './components/loading-screen/loading-scre
 
 const commonComponents = [LoadingScreenComponent];
 @NgModule({
-  declarations: [...commonComponents],
+  declarations: [...commonComponents, EllipsisPipe],
   imports: [CommonModule, RouterModule],
-  exports: [RouterModule, ...commonComponents],
+  exports: [RouterModule, ...commonComponents, EllipsisPipe],
 })
 export class SharedModule {}
