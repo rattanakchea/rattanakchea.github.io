@@ -1,0 +1,23 @@
+nav.navbar {
+  color: black;
+  //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+  width: 25px;
+  height: 25px;
+  background-image: url("/assets/img/gravatar.png");
+}
+
+
+li.nav-item {
+  a.nav-link {
+    color: #9e9aa7;
+
+    &:hover {
+      color: black;
+      font-weight: 500;
+    }
+  }
+}
