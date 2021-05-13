@@ -1,3 +1,43 @@
+/*! CSS Used fontfaces */
+@font-face {
+  font-family: silkabold;
+  src: url(/assets/silka-bold-webfont.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: clamp(2.5rem, 3.2vw + 2rem, 4rem);
+  min-height: 0vh;
+  font-family: silkabold;
+  text-align: center;
+  line-height: 1.2;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 2px;
+  background: linear-gradient(
+      90deg,
+      rgb(2, 0, 36) 0%,
+      rgb(9, 9, 121) 57%,
+      rgb(0, 212, 255) 100%
+    )
+    text rgb(2, 0, 36);
+  background-image: linear-gradient(
+    90deg,
+    rgb(17, 17, 19) 0%,
+    rgb(70, 143, 156) 57%,
+    rgb(0, 212, 255) 100%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: text;
+  background-color: rgb(2, 0, 36);
+}
+
 nav.navbar {
   color: black;
   //   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -10,14 +50,10 @@ nav.navbar {
   background-image: url("/assets/img/gravatar.png");
 }
 
-
 li.nav-item {
   a.nav-link {
-    color: #9e9aa7;
-
     &:hover {
       color: black;
-      font-weight: 500;
     }
   }
 }
