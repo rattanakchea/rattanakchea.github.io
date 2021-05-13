@@ -75,7 +75,7 @@ export const Projects = [
     dateCreated: '5/5/2016',
     demo: 'http://rattanakchea.github.io/monopolychecker/',
     source: 'https://github.com/rattanakchea/monopolychecker',
-    image: 'assets/images/web/monopolychecker.jpg',
+    image: 'assets/projects-screenshots/monopolychecker.jpeg',
   },
   {
     id: 'mini-trello',
@@ -85,7 +85,7 @@ export const Projects = [
       'Build a todo app in a day with Angular + Firebase with user email authentication. Tech: Angular, Firebase, Unit Testing, Jasmine, Grunt.',
     dateCreated: '2/18/2015',
     demo: 'https://awesometodos.firebaseapp.com',
-    image: 'assets/images/web/minitrello.png',
+    image: 'assets/projects-screenshots/minitrello.png',
   },
   {
     title: 'Google Keep Clone',
@@ -93,6 +93,6 @@ export const Projects = [
       'Google Keep Clone provides CRUD operations for note-taking. I used OOP PHP to build a web service supporting GET, POST, PUT, and UPDATE requests. For front end, I used Angular JS for tempting and using $http service to manage requests. The MaterializeCSS framework provides modern, beautiful interface. By separating server, client and database layer, the business logic can be separated from presentation. This allows me to extend applications or build mobile application in the future.',
     demo: 'http://note-taking.atwebpages.com/#',
     source: 'https://github.com/rattanakchea/google-keep-clone',
-    image: 'assets/images/web/google-keep-clone.png',
+    image: 'assets/projects-screenshots/google-keep-clone.png',
   },
 ];

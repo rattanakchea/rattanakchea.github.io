@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Projects } from '../../data/projects';
 
 @Component({
@@ -7,7 +7,7 @@ import { Projects } from '../../data/projects';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  projects = Projects;
+  @Input() projects = Projects; //default to all projects
 
   constructor() {}
 
