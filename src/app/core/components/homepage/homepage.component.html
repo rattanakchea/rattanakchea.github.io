@@ -4,8 +4,14 @@
 <section class="bg-light bg-gradient py-3">
 
     <div class="container">
-        <h2>Recent Projects</h2>
-        <p>Shuffle, All Projects</p>
+
+        <div class="d-flex">
+            <h2>
+                Recent Projects
+            </h2>
+            <button type="button" class="btn btn-link" (click)="shuffleProjects()">Shuffle <i class="bi bi-shuffle"></i></button>
+        </div>
+
         <div class="container">
             <app-projects-list [projects]="projects"></app-projects-list>
         </div>

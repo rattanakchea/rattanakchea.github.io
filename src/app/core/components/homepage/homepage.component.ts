@@ -7,11 +7,17 @@ import { Projects } from '../../data/projects';
   styleUrls: ['./homepage.component.scss'],
 })
 export class HomepageComponent implements OnInit {
-  projects = this.random(Projects, 4);
+  projects: any;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.shuffleProjects();
+  }
+
+  shuffleProjects() {
+    this.projects = this.random(Projects, 4);
+  }
 
   // get random number of items from an array
   random(array: any[], count: number) {
