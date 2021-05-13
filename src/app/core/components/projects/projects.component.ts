@@ -7,7 +7,7 @@ import { Projects } from '../../data/projects';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
-  @Input() projects = Projects; //default to all projects
+  projects = Projects;
 
   constructor() {}
 

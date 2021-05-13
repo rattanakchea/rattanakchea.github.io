@@ -7,6 +7,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
 import { SharedModule } from '../shared/shared.module';
+import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component';
 // import { LoadingScreenComponent } from "./loading-screen/loading-screen.component";
 // import { DynamicNavComponent } from "./dynamic-nav/dynamic-nav.component";
 
@@ -41,7 +42,7 @@ const commonComponents = [
   Page404Component,
 ];
 @NgModule({
-  declarations: [...commonComponents],
+  declarations: [...commonComponents, ProjectsListComponent],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule, ...commonComponents],
 })
