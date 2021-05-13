@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+#sidebar {
+  min-height: 100%;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+
+  .sidebar__item {
+    border-bottom: 1px solid #cfcfcf;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(0, 0, 0, 0.65);
+
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}

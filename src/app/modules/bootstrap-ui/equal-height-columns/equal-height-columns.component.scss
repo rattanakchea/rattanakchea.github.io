@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+/**
+ * Make images responsive
+ */
+.flex .col img {
+  width: 100%;
+  height: auto;
+}
+
+/**
+ * Make .flex children same
+ * height using display flex.
+ * Justify property prepares
+ * cols for being centered.
+ */
+.flex {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+}
+
+/**
+ * Make cols flexible to
+ * auto push button at the
+ * col bottom.
+ */
+.flex .col {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 300px;
+  /* 
+	In the order, equal to
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 300px;
+	*/
+}
+
+/**
+ * Margin-top auto pushes
+ * button to bottom.
+ * Align self makes button
+ * stuck to the left.
+ */
+.flex .col .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/**
+ * Under 900px wrap cols
+ */
+@media (max-width: 900px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}

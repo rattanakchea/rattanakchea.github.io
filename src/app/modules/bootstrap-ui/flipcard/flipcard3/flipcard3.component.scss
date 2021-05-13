@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+#checkbox-fc3 {
+  // display: none;
+  z-index: 10;
+}
+
+#checkbox-fc3:checked ~ .card .card-front {
+  transform: rotateY(180deg);
+}
+
+#checkbox-fc3:checked ~ .card .card-back {
+  transform: rotateY(360deg);
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  text-align: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  // &:hover .card-front {
+  //   transform: rotateY(180deg);
+  // }
+
+  // &:hover .card-back {
+  //   transform: rotateY(360deg);
+  // }
+
+  // animations
+  .card-front {
+    background: rgb(216, 143, 245);
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background: rgb(117, 216, 237);
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    transition: all 1s ease;
+  }
+}

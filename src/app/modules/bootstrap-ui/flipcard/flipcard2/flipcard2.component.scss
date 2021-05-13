@@ -1,0 +1,58 @@
+:host {
+  display: block;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  text-align: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover .card-front {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .card-back {
+    transform: rotateY(360deg);
+  }
+
+  // animations
+  .card-front {
+    background: rgb(117, 216, 237);
+    background: linear-gradient(
+      90deg,
+      rgba(117, 216, 237, 1) 0%,
+      rgba(21, 146, 171, 0.7987570028011204) 100%
+    );
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background: rgb(117, 216, 237);
+    background: linear-gradient(
+      90deg,
+      rgba(21, 146, 171, 0.7987570028011204) 100% rgba(117, 216, 237, 1) 0%
+    );
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backface-visibility: hidden;
+    transition: all 1s ease;
+  }
+}

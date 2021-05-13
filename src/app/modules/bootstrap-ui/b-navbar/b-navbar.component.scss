@@ -1,0 +1,62 @@
+:host {
+  display: block;
+}
+
+.navbar1,
+.navbar2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+
+  ul.main-nav {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  ul.main-nav li {
+    display: inline;
+  }
+  ul.main-nav a {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+  }
+}
+
+/**
+ * Space-around become
+ * Space-between to
+ * distribute space
+ * between the flex-items
+ */
+@media (min-width: 960px) {
+  .navbar1 {
+    justify-content: space-between;
+  }
+
+  .navbar2 {
+    justify-content: space-between;
+  }
+}
+
+//unused below
+
+/**
+ * Images a now responsive
+ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Limit the container in
+ * width for big screens
+ */
+.container {
+  width: 960px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}

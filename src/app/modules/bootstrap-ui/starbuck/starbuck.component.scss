@@ -1,0 +1,46 @@
+:host {
+  display: block;
+
+  --colorTextBlack: rgba(0, 0, 0, 0.87);
+  --colorTextBlackSoft: rgba(0, 0, 0, 0.56);
+  --colorTextWhite: rgba(255, 255, 255, 1);
+  --colorTextWhiteSoft: rgba(211, 211, 211, 0.7);
+}
+
+$primary: #00653e; //--colorGreenStarbucks
+$secondary: #cba258; //--colorGold
+
+#starbuck-app {
+  width: 500px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  color: var(--colorTextBlack);
+  background-color: #f8f9fa;
+
+  header {
+    flex-shrink: 0;
+  }
+
+  footer.nav {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+
+    a.btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    mat-icon {
+      color: var(--colorTextBlackSoft);
+    }
+
+    mat-icon.green-icon {
+      color: $primary;
+    }
+  }
+}

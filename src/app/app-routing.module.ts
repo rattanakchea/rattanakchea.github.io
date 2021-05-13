@@ -15,6 +15,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'bootstrap-ui',
+    loadChildren: () =>
+      import('./modules/bootstrap-ui/bootstrap-ui.module').then(
+        (m) => m.BootstrapUIModule
+      ),
+  },
+  {
     path: '**',
     component: Page404Component,
   },
