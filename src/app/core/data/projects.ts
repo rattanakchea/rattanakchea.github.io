@@ -8,8 +8,12 @@ if (environment.production) {
 
 const ProjectURLs = {
   robinhood: {
-    URL: `${URL}/robinhood`,
+    URL: `/robinhood`,
     image: '/assets/projects-screenshots/robinhood-1.png',
+  },
+  boostrapUI: {
+    URL: `/bootstrap-ui`,
+    image: '/assets/projects-screenshots/bootstrap-ui.png',
   },
   redbox: {
     demo: `https://rattanakchea.github.io/redbox-clone/`,
@@ -30,6 +34,16 @@ export const Projects = [
     demo: ProjectURLs.robinhood.URL,
     source: '',
     image: ProjectURLs.robinhood.image,
+    featured: true,
+  },
+  {
+    id: 'bootstrap-ui',
+    title: 'UI Component built with Boostrap',
+    description: 'Build reusable, clean UI components with Bootstrap 5',
+    dateCreated: '01/01/2021',
+    demo: ProjectURLs.boostrapUI.URL,
+    source: '',
+    image: ProjectURLs.boostrapUI.image,
     featured: true,
   },
   {
