@@ -21,6 +21,7 @@ export class HomepageComponent implements OnInit {
 
   // get random number of items from an array
   random(array: any[], count: number) {
-    return array.sort(() => 0.5 - Math.random()).slice(0, count);
+    // [...array], spread to avoid sort in place
+    return [...array].sort(() => 0.5 - Math.random()).slice(0, count);
   }
 }
