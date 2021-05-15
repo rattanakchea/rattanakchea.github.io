@@ -9,8 +9,9 @@ import { Page404Component } from './components/page404/page404.component';
 import { SharedModule } from '../shared/shared.module';
 import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { StocksTrackerComponent } from './components/projects/stocks-tracker/stocks-tracker.component';
+import { ProjectsListPageComponent } from './components/projects/projects-list-page/projects-list-page.component';
 // import { LoadingScreenComponent } from "./loading-screen/loading-screen.component";
-// import { DynamicNavComponent } from "./dynamic-nav/dynamic-nav.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,16 @@ const routes: Routes = [
   {
     path: 'projects',
     component: ProjectsComponent,
+    children: [
+      {
+        path: '',
+        component: ProjectsListPageComponent,
+      },
+      {
+        path: 'stock-tracker',
+        component: StocksTrackerComponent,
+      },
+    ],
   },
   {
     path: 'resume',
@@ -42,7 +53,9 @@ const commonComponents = [
   IntroductionComponent,
   HomepageComponent,
   ProjectsComponent,
+  ProjectsListPageComponent,
   Page404Component,
+  StocksTrackerComponent,
 ];
 @NgModule({
   declarations: [...commonComponents, ProjectsListComponent, ResumeComponent],

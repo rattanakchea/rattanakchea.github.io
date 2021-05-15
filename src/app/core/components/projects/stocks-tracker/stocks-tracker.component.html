@@ -1,0 +1,76 @@
+<div class="container-fluid mt-4">
+    <h2 class="text-primary">Stocks Tracker</h2>
+</div>
+
+<!-- left navigation -->
+
+<div class="main row">
+
+    <aside class="col-md-2 bg-light p-3">
+        <div class="list-group list-group-flush">
+            <a routerLink="./login" class="sidebar__item">Options</a>
+            <a routerLink="./pricing" class="sidebar__item">Stocks</a>
+
+        </div>
+    </aside>
+
+    <div class="col-md-10 bg-white p-3">
+
+
+        <form [formGroup]="optionForm">
+
+            <button class="btn btn-primary" (click)="useSampleData()">Use Sample Data</button>
+
+            <label>
+                Ticker
+                <input type="text" formControlName="ticker">
+            </label>
+
+            <label>
+                Strike Price:
+                <input type="number" formControlName="strikePrice">
+            </label>
+
+            <label>
+                Expiration Date:
+                <input type="date" formControlName="expirationDate">
+            </label>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Option Type</mat-label>
+                <mat-select formControlName="optionType">
+                    <mat-option value="C">
+                        CALL
+                    </mat-option>
+                    <mat-option value="P">
+                        PUT
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+
+        <div class="box bg-light m-4">
+
+            <h2>
+                <p>
+                    Generated Result:
+                    <span>
+                        {{ buildOptionQuote(optionForm.value) }}
+                    </span>
+                </p>
+
+                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value)">
+                    Quote
+                </a> &nbsp;
+
+                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value) + '/chart'">
+                    Chart
+                </a>
+            </h2>
+        </div>
+
+    </div>
+
+
+
+</div>
