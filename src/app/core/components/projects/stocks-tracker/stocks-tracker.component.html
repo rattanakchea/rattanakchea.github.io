@@ -59,11 +59,12 @@
                     </span>
                 </p>
 
-                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value)">
+                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value)" target="_blank">
                     Quote
                 </a> &nbsp;
 
-                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value) + '/chart'">
+                <a [href]="'https://finance.yahoo.com/quote/' + buildOptionQuote(optionForm.value) + '/chart'"
+                    target="_blank">
                     Chart
                 </a>
             </h2>
