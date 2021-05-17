@@ -1,6 +1,5 @@
 {
     "files.autoSave": "onFocusChange",
-    "peacock": "#61b5d6",
     "workbench.colorCustomizations": {
         "activityBar.background": "#40a8d1",
         "activityBar.foreground": "#e7e7e7",
@@ -15,6 +14,7 @@
         "statusBarItem.hoverBackground": "#61b5d6",
         "statusBar.foreground": "#e7e7e7",
         "activityBar.activeBackground": "#61b5d6",
-        "activityBar.activeBorder": "#5fa06e"
+        "activityBar.activeBorder": "#5fa06e",
+        "tab.activeBackground": "#40a8d1"
       },
 }
