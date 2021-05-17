@@ -15,6 +15,7 @@
         "statusBar.foreground": "#e7e7e7",
         "activityBar.activeBackground": "#61b5d6",
         "activityBar.activeBorder": "#5fa06e",
-        "tab.activeBackground": "#40a8d1"
+        "tab.activeBackground": "#78c5e4",
+        "tab.activeBorder": "#FFF"
       },
 }
