@@ -8,6 +8,13 @@ const routes: Routes = [
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   },
   {
+    path: 'projects', //lazy load route
+    loadChildren: () =>
+      import('./modules/projects/projects.module').then(
+        (m) => m.ProjectsModule
+      ),
+  },
+  {
     path: 'robinhood', //lazy load route
     loadChildren: () =>
       import('./modules/robinhood/robinhood.module').then(

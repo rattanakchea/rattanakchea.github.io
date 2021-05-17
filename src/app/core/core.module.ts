@@ -4,13 +4,9 @@ import { NavigationComponent } from './components/common/navigation/navigation.c
 import { RouterModule, Routes } from '@angular/router';
 import { IntroductionComponent } from './components/introduction/introduction.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 import { Page404Component } from './components/page404/page404.component';
 import { SharedModule } from '../shared/shared.module';
-import { ProjectsListComponent } from './components/projects/projects-list/projects-list.component';
 import { ResumeComponent } from './components/resume/resume.component';
-import { StocksTrackerComponent } from './components/projects/stocks-tracker/stocks-tracker.component';
-import { ProjectsListPageComponent } from './components/projects/projects-list-page/projects-list-page.component';
 // import { LoadingScreenComponent } from "./loading-screen/loading-screen.component";
 
 const routes: Routes = [
@@ -29,20 +25,6 @@ const routes: Routes = [
     // ],
   },
   {
-    path: 'projects',
-    component: ProjectsComponent,
-    children: [
-      {
-        path: '',
-        component: ProjectsListPageComponent,
-      },
-      {
-        path: 'stock-tracker',
-        component: StocksTrackerComponent,
-      },
-    ],
-  },
-  {
     path: 'resume',
     component: ResumeComponent,
   },
@@ -52,13 +34,11 @@ const commonComponents = [
   NavigationComponent,
   IntroductionComponent,
   HomepageComponent,
-  ProjectsComponent,
-  ProjectsListPageComponent,
   Page404Component,
-  StocksTrackerComponent,
+  ResumeComponent,
 ];
 @NgModule({
-  declarations: [...commonComponents, ProjectsListComponent, ResumeComponent],
+  declarations: [...commonComponents],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule, ...commonComponents],
 })

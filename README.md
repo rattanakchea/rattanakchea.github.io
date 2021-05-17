@@ -4,7 +4,11 @@
 
 - [] Add Fluid Typography in Logo: https://fluid-typography.netlify.app/
 - [] Add more project (Bootstrap UI)
-- [] Add more icons for Shuffle, All Projects links
+- [x] Add more icons for Shuffle, All Projects links
+
+## Web Resources
+
+- https://web.dev/one-line-layouts/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
