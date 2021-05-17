@@ -1,6 +1,6 @@
-<div class="d-flex flex-wrap mt-3" style="gap: 20px">
+<div class="d-flex flex-wrap justify-content-center mt-3" style="gap: 20px">
 
-    <div class="card rounded-3 shadow-sm" style="max-width: 500px; " *ngFor="let item of projects">
+    <div class="card rounded-3 shadow-sm" style="flex: 1 1 400px" *ngFor="let item of projects">
         <div class="row g-0">
             <div class="col-md-4">
                 <img *ngIf="item.image" src="{{item.image}}" alt="robinhood screenshot" style="width: 100%">
