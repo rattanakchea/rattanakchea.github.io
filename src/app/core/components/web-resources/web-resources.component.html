@@ -1,1 +1,23 @@
-<p>web-resources works!</p>
+<div class="container">
+    <table class="table caption-top">
+        <caption>List of useful learning resources (Data fetched from Google Sheet API*)</caption>
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">URL</th>
+                <th scope="col">Category</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let item of projects">
+                <td>{{item.Title}}</td>
+                <td><a href="{{item.URL}}">{{item.URL}}</a>
+                </td>
+                <td>{{item.Category}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Angular material table : https://material.angular.io/components/table/examples -->
