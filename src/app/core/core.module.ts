@@ -7,6 +7,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { Page404Component } from './components/page404/page404.component';
 import { SharedModule } from '../shared/shared.module';
 import { ResumeComponent } from './components/resume/resume.component';
+import { WebResourcesComponent } from './components/web-resources/web-resources.component';
 // import { LoadingScreenComponent } from "./loading-screen/loading-screen.component";
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
     path: 'resume',
     component: ResumeComponent,
   },
+  {
+    path: 'web-resources',
+    component: WebResourcesComponent,
+  },
 ];
 
 const commonComponents = [
@@ -38,7 +43,7 @@ const commonComponents = [
   ResumeComponent,
 ];
 @NgModule({
-  declarations: [...commonComponents],
+  declarations: [...commonComponents, WebResourcesComponent],
   imports: [CommonModule, RouterModule.forChild(routes), SharedModule],
   exports: [RouterModule, ...commonComponents],
 })
