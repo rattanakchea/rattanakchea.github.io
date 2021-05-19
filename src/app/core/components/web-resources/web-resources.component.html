@@ -1,23 +1,10 @@
-<div class="container">
-    <table class="table caption-top">
-        <caption>List of useful learning resources (Data fetched from Google Sheet API*)</caption>
-        <thead>
-            <tr>
-                <th scope="col">Title</th>
-                <th scope="col">URL</th>
-                <th scope="col">Category</th>
-            </tr>
-        </thead>
-        <tbody>
+<div class="container mt-3">
 
-            <tr *ngFor="let item of projects">
-                <td>{{item.Title}}</td>
-                <td><a href="{{item.URL}}">{{item.URL}}</a>
-                </td>
-                <td>{{item.Category}}</td>
-            </tr>
-        </tbody>
-    </table>
+
+    <div class="d-flex justify-content-center" *ngIf="!projects">
+        <mat-spinner diameter="40"></mat-spinner>
+    </div>
+    <ng-container *ngIf="projects">
+        <app-web-resources-table [projects]="projects"></app-web-resources-table>
+    </ng-container>
 </div>
-
-<!-- Angular material table : https://material.angular.io/components/table/examples -->

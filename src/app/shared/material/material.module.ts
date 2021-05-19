@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const materialModules = [
   MatTableModule,
@@ -26,6 +27,7 @@ const materialModules = [
   MatSidenavModule,
   MatCheckboxModule,
   MatSelectModule,
+  MatProgressSpinnerModule,
 ];
 
 @NgModule({
