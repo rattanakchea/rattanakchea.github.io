@@ -13,6 +13,7 @@ import { IProject } from '../web-resources.component';
 })
 export class WebResourcesTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['Title', 'URL', 'Category'];
+  pageSize = 20;
 
   dataSource: MatTableDataSource<IProject> | null = null;
 

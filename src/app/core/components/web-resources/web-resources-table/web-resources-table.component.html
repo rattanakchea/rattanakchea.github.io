@@ -1,9 +1,16 @@
+<h2>Learning Resources</h2>
+<p>This is a collection of hand-picked blogs, newsletters for learning programming. </p>
+<p class="text-muted">Data is retrieved from a Google sheet.</p>
 <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. JavaScript" #input>
 </mat-form-field>
 
 <div class="mat-elevation-z8" *ngIf="dataSource">
+    <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[10, 20, 40, 100]" class="d-flex justify-content-center"
+        color="primary" style="font-size: 1rem; color: #2EA6BD">
+    </mat-paginator>
+
     <table mat-table [dataSource]="dataSource" matSort>
 
         <!-- ID Column -->
@@ -36,5 +43,4 @@
         </tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
 </div>

@@ -1,13 +1,12 @@
 table {
   width: 100%;
+  table-layout: fixed;
+
+  td {
+    word-wrap: break-word;
+  }
 }
 
 .mat-form-field {
-  font-size: 14px;
   width: 100%;
-}
-
-td,
-th {
-  width: 25%;
 }
