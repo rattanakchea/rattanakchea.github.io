@@ -1,15 +1,30 @@
 <h2>Learning Resources</h2>
 <p>This is a collection of hand-picked blogs, newsletters for learning programming. </p>
 <p class="text-muted">Data is retrieved from a Google sheet.</p>
-<mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. JavaScript" #input>
-</mat-form-field>
+
+<h3>I have written a few articles on Blogging platforms</h3>
+<ul>
+    <li><a href="https://dev.to/rattanakchea">My Blog on Dev.to</a></li>
+    <li><a href="https://hashnode.com/@rattanak">My on Hashnode</a></li>
+</ul>
+
+
 
 <div class="mat-elevation-z8" *ngIf="dataSource">
-    <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[10, 20, 40, 100]" class="d-flex justify-content-center"
-        color="primary" style="font-size: 1rem; color: #2EA6BD">
-    </mat-paginator>
+
+    <div class="d-flex justify-content-between flex-wrap">
+
+        <mat-paginator [pageSize]="pageSize" [pageSizeOptions]="[10, 20, 40, 100]" class="d-flex justify-content-center"
+            color="primary" style="font-size: 1rem; color: #2EA6BD">
+        </mat-paginator>
+
+        <mat-form-field class="w-50 pr-3">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. JavaScript" #input>
+        </mat-form-field>
+    </div>
+
+
 
     <table mat-table [dataSource]="dataSource" matSort>
 
