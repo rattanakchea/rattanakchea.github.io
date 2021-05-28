@@ -29,6 +29,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'github-repo', //lazy load route
+    loadChildren: () =>
+      import('./modules/github-repo/github-repo.module').then(
+        (m) => m.GithubRepoModule
+      ),
+  },
+  {
     path: '**',
     component: Page404Component,
   },
