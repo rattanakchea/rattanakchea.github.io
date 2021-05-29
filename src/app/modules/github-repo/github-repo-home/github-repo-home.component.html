@@ -1,6 +1,16 @@
 <div class="container-fluid text-center p-3 mb-3">
-    <label for="">Enter Repo Username</label>
-    <input type="text">
+
+    <form (ngSubmit)="onSubmit(actionState)" novalidate>
+        <div class="form-group d-flex gap-2 justify-content-center">
+            <label class="col-form-label">Github Repo User</label>
+            <div class="">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter a repo user" [(ngModel)]="actionState.searchQuery" name="repo">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+
+        </div>
+    </form>
 </div>
 
 
@@ -12,7 +22,10 @@
     </aside>
 
     <main class="flex-grow-1 overflow-auto p-3">
-        Github Repo Detail
+
+        <pre>
+            {{ actionState | json }}
+        </pre>
 
         <p>Markdown reader - Readme.md</p>
     </main>
