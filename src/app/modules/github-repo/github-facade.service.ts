@@ -2,12 +2,16 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 interface IGithubRepoState {
+  followers: number;
+  following: number;
   repoList: any[];
   repoListLoading: boolean;
   repoDetail: Object;
 }
 
 const initialState: IGithubRepoState = {
+  followers: 0,
+  following: 0,
   repoList: [],
   repoListLoading: false,
   repoDetail: {},

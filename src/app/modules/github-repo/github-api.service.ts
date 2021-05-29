@@ -1,72 +1,37 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-
-interface IGithubRepoState {
-  repoList: any[];
-  repoListLoading: boolean;
-  repoDetail: Object;
-}
-
-const initialState: IGithubRepoState = {
-  repoList: [],
-  repoListLoading: false,
-  repoDetail: {},
-};
-
-export interface IActionState {
-  searchQuery: string;
-  selectedRepo: string;
-  sort: string;
-  pagination: {
-    page: number;
-    pageSize: number;
-    pageSizeOptions: number[];
-    total: number;
-  };
-}
-
-const initialActionState: IActionState = {
-  searchQuery: '',
-  selectedRepo: '',
-  sort: '',
-  pagination: {
-    page: 1,
-    pageSize: 10,
-    pageSizeOptions: [5, 10, 20, 30, 50],
-    total: 0,
-  },
-};
+import { BehaviorSubject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class GithubFacadeService {
-  private _actionSubject: BehaviorSubject<IActionState> =
-    new BehaviorSubject<IActionState>(initialActionState);
+export class GithubApiService {
+  BASE_URI = 'https://api.github.com/users';
 
-  actionState$ = this._actionSubject.asObservable();
+  URLs = {
+    user_url: '',
+    repos_url: () => this.BASE_URI,
+  };
 
-  constructor() {}
+  constructor(private httpClient: HttpClient) {}
 
-  get actionState() {
-    return this._actionSubject.getValue();
+  getUserInfo(username: string): Observable<any> {
+    if (!username) {
+      console.log('a username must be provided');
+      return of(null);
+    }
+
+    let URL = `${this.BASE_URI}/${username}`;
+    return this.httpClient.get(URL);
   }
 
-  resetState() {
-    this.setState(initialActionState);
-  }
+  getReposInfo(username: string): Observable<any> {
+    if (!username) {
+      console.log('a username must be provided');
+      return of(null);
+    }
 
-  setState(newState: Partial<IActionState>) {
-    this._actionSubject.next({
-      ...this.actionState,
-      ...newState,
-    });
+    let URL = `${this.BASE_URI}/${username}/repos`;
+    return this.httpClient.get(URL);
   }
-
-  // protected select<K>(mapFn: (state: T) => K): Observable<K> {
-  //   return this.state$.asObservable().pipe(
-  //     map((state: T) => mapFn(state)),
-  //     distinctUntilChanged()
-  //   );
-  // }
 }

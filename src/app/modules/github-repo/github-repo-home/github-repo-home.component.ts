@@ -1,6 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { GithubApiService } from '../github-api.service';
 import { IActionState, GithubFacadeService } from '../github-facade.service';
 
 @Component({
@@ -11,7 +12,11 @@ import { IActionState, GithubFacadeService } from '../github-facade.service';
 export class GithubRepoHomeComponent implements OnInit {
   sub: Subscription | null = null;
   actionState: IActionState;
-  constructor(private GithubFacadeService: GithubFacadeService) {
+
+  constructor(
+    private GithubFacadeService: GithubFacadeService,
+    private GithubApiService: GithubApiService
+  ) {
     this.actionState = this.GithubFacadeService.actionState;
   }
 
@@ -21,6 +26,15 @@ export class GithubRepoHomeComponent implements OnInit {
     this.GithubFacadeService.actionState$.subscribe((state) => {
       console.log('subscribed state: ', state);
 
+      this.GithubApiService.getUserInfo(state.searchQuery).subscribe(
+        (result: any) => {
+          console.log('user info', result);
+
+          const { followers, following } = result;
+
+          console.log(followers);
+        }
+      );
       // with the state provided, call Github API
     });
   }
