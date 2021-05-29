@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-interface IGithubRepoState {
+export interface IGithubRepoState {
   followers: number;
   following: number;
   repoList: any[];
@@ -47,8 +47,13 @@ const initialActionState: IActionState = {
 export class GithubFacadeService {
   private _actionSubject: BehaviorSubject<IActionState> =
     new BehaviorSubject<IActionState>(initialActionState);
-
   actionState$ = this._actionSubject.asObservable();
+
+  // App state for UI
+  private _githubSubject: BehaviorSubject<IGithubRepoState> =
+    new BehaviorSubject<IGithubRepoState>(initialState);
+
+  vm$ = this._githubSubject.asObservable();
 
   constructor() {}
 
@@ -63,6 +68,13 @@ export class GithubFacadeService {
   setState(newState: Partial<IActionState>) {
     this._actionSubject.next({
       ...this.actionState,
+      ...newState,
+    });
+  }
+
+  setState2(newState: Partial<IGithubRepoState>) {
+    this._githubSubject.next({
+      ...this._githubSubject.getValue(),
       ...newState,
     });
   }

@@ -12,6 +12,7 @@ import { IActionState, GithubFacadeService } from '../github-facade.service';
 export class GithubRepoHomeComponent implements OnInit {
   sub: Subscription | null = null;
   actionState: IActionState;
+  vm$ = this.GithubFacadeService.vm$;
 
   constructor(
     private GithubFacadeService: GithubFacadeService,
@@ -30,9 +31,12 @@ export class GithubRepoHomeComponent implements OnInit {
         (result: any) => {
           console.log('user info', result);
 
-          const { followers, following } = result;
+          if (result) {
+            const { followers, following } = result;
+            console.log(followers);
 
-          console.log(followers);
+            this.GithubFacadeService.setState2({ followers, following });
+          }
         }
       );
       // with the state provided, call Github API

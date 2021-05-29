@@ -15,10 +15,10 @@
 
 
 
-<div class="content d-flex flex-grow-1 align-items-stretch">
+<div class="content d-flex flex-grow-1 align-items-stretch" *ngIf="vm$ | async as vm">
 
     <aside class="flex-column flex-shrink-0 p-3 bg-light" style="width: 30%">
-        <app-github-repo-list class="flex-column h-100"></app-github-repo-list>
+        <app-github-repo-list class="flex-column h-100" [data]="vm"></app-github-repo-list>
     </aside>
 
     <main class="flex-grow-1 overflow-auto p-3">
