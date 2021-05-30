@@ -32,10 +32,12 @@ export class GithubRepoHomeComponent implements OnInit {
           console.log('user info', result);
 
           if (result) {
-            const { followers, following } = result;
+            const { name, followers, following, avatar_url, html_url } = result;
             console.log(followers);
 
-            this.GithubFacadeService.setState2({ followers, following });
+            this.GithubFacadeService.setState2({
+              userInfo: { name, avatar_url, followers, following, html_url },
+            });
           }
         }
       );
