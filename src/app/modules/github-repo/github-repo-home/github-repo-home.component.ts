@@ -1,6 +1,5 @@
-import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { combineLatest, Subscription } from 'rxjs';
 import { GithubApiService } from '../github-api.service';
 import { IActionState, GithubFacadeService } from '../github-facade.service';
 
@@ -27,21 +26,37 @@ export class GithubRepoHomeComponent implements OnInit {
     this.GithubFacadeService.actionState$.subscribe((state) => {
       console.log('subscribed state: ', state);
 
-      this.GithubApiService.getUserInfo(state.searchQuery).subscribe(
-        (result: any) => {
-          console.log('user info', result);
+      const userInfo$ = this.GithubApiService.getUserInfo(state.searchQuery);
+      const userRepo$ = this.GithubApiService.getReposInfo(state.searchQuery);
 
-          if (result) {
-            const { name, followers, following, avatar_url, html_url } = result;
-            console.log(followers);
+      combineLatest([userInfo$, userRepo$]).subscribe(
+        ([userInfo, userRepo]) => {
+          console.log(userInfo);
+          console.log(userRepo);
 
-            this.GithubFacadeService.setState2({
-              userInfo: { name, avatar_url, followers, following, html_url },
-            });
-          }
+          const { name, followers, following, avatar_url, html_url } = userInfo;
+
+          this.GithubFacadeService.setState2({
+            userInfo: { name, avatar_url, followers, following, html_url },
+            repoList: userRepo,
+          });
         }
       );
-      // with the state provided, call Github API
+
+      // this.GithubApiService.getUserInfo(state.searchQuery).subscribe(
+      //   (result: any) => {
+      //     console.log('user info', result);
+
+      //     if (result) {
+      //       const { name, followers, following, avatar_url, html_url } = result;
+      //       console.log(followers);
+
+      //       this.GithubFacadeService.setState2({
+      //         userInfo: { name, avatar_url, followers, following, html_url },
+      //       });
+      //     }
+      //   }
+      // );
     });
   }
 
