@@ -31,7 +31,7 @@ export class GithubApiService {
       return of(null);
     }
 
-    let URL = `${this.BASE_URI}/${username}/repos`;
+    let URL = `${this.BASE_URI}/${username}/repos?sort=updated`;
     return this.httpClient.get(URL);
   }
 }

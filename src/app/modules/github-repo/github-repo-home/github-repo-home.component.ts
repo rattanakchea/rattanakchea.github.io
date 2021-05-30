@@ -34,12 +34,16 @@ export class GithubRepoHomeComponent implements OnInit {
           console.log(userInfo);
           console.log(userRepo);
 
-          const { name, followers, following, avatar_url, html_url } = userInfo;
+          // Todo avoid null automatically
+          if (userInfo && userRepo) {
+            const { name, followers, following, avatar_url, html_url } =
+              userInfo;
 
-          this.GithubFacadeService.setState2({
-            userInfo: { name, avatar_url, followers, following, html_url },
-            repoList: userRepo,
-          });
+            this.GithubFacadeService.setState2({
+              userInfo: { name, avatar_url, followers, following, html_url },
+              repoList: userRepo,
+            });
+          }
         }
       );
 
