@@ -11,7 +11,7 @@ export interface IGithubRepoState {
   };
   repoList: any[];
   repoListLoading: boolean;
-  repoDetail: Object;
+  selectedRepo: any;
 }
 
 const initialState: IGithubRepoState = {
@@ -24,7 +24,7 @@ const initialState: IGithubRepoState = {
   },
   repoList: [],
   repoListLoading: false,
-  repoDetail: {},
+  selectedRepo: null,
 };
 
 export interface IActionState {

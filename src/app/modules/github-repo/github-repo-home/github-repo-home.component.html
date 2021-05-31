@@ -39,12 +39,27 @@
     </aside>
 
     <main class="flex-grow-1 overflow-auto p-3">
+        <h3>Repo Detail</h3>
 
-        <pre>
-            {{ actionState | json }}
-        </pre>
+        <ng-container *ngIf="vm.selectedRepo; let repo">
 
-        <p>Markdown reader - Readme.md</p>
+            <dl class="row">
+                <dt class="col-sm-3">Repo Name</dt>
+                <dd class="col-sm-9">{{ repo.name}}</dd>
+
+                <dt class="col-sm-3">description</dt>
+                <dd class="col-sm-9">{{ repo.description}}</dd>
+
+                <dt class="col-sm-3">URL</dt>
+                <dd class="col-sm-9">
+                    <a href="{{ repo.html_url}}" target="_blank">{{ repo.html_url}}</a>
+
+                </dd>
+            </dl>
+
+        </ng-container>
+
+
     </main>
 
 </div>
