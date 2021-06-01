@@ -12,6 +12,7 @@ import { IActionState, GithubFacadeService } from '../github-facade.service';
 export class GithubRepoHomeComponent implements OnInit {
   sub: Subscription | null = null;
   actionState: IActionState;
+
   vm$ = this.GithubFacadeService.vm$;
 
   constructor(
@@ -22,8 +23,6 @@ export class GithubRepoHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // subscription to
-
     this.GithubFacadeService.actionState$.subscribe((state) => {
       console.log('subscribed state: ', state);
 
@@ -45,6 +44,7 @@ export class GithubRepoHomeComponent implements OnInit {
             const { name, followers, following, avatar_url, html_url } =
               userInfo;
 
+            // set the GithubSubject VM state
             this.GithubFacadeService.setState2({
               userInfo: { name, avatar_url, followers, following, html_url },
               repoList: userRepo,

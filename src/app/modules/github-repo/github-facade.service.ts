@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { skip } from 'rxjs/operators';
 
 export interface IGithubRepoState {
   userInfo: {
@@ -63,7 +64,9 @@ export class GithubFacadeService {
   private _githubSubject: BehaviorSubject<IGithubRepoState> =
     new BehaviorSubject<IGithubRepoState>(initialState);
 
-  vm$ = this._githubSubject.asObservable();
+  // skip initial state, or use Subject
+
+  vm$ = this._githubSubject.asObservable().pipe(skip(1));
 
   constructor() {}
 
