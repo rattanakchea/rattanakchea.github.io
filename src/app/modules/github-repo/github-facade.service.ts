@@ -58,7 +58,9 @@ const initialActionState: IActionState = {
 export class GithubFacadeService {
   private _actionSubject: BehaviorSubject<IActionState> =
     new BehaviorSubject<IActionState>(initialActionState);
-  actionState$ = this._actionSubject.asObservable();
+
+  // TODO better way then skip(1) ?
+  actionState$ = this._actionSubject.asObservable().pipe(skip(1));
 
   // App state for UI
   private _githubSubject: BehaviorSubject<IGithubRepoState> =
