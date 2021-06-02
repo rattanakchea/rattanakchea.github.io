@@ -11,6 +11,8 @@
 
         </div>
     </form>
+
+
 </div>
 
 
@@ -20,6 +22,10 @@
     </span>
     <my-ellipsis></my-ellipsis>
 </div>
+
+<p class="text-warning text-center" *ngIf="errorMsg">
+    {{ errorMsg | json }}
+</p>
 
 <div class="content d-flex flex-grow-1 align-items-stretch" *ngIf="vm$ | async as vm">
 
@@ -73,3 +79,10 @@
     </main>
 
 </div>
+
+<p class="container text-muted mt-auto">Github has rate limit for usage their API. This website can make up to 60
+    requests per
+    hour.
+    For more info,
+    please follow <a href="https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting">here</a>
+</p>

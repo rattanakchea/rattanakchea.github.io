@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, Subject, Subscription } from 'rxjs';
-import { filter, skip } from 'rxjs/operators';
+import { combineLatest, of, Subject, Subscription } from 'rxjs';
+import { catchError, filter, skip } from 'rxjs/operators';
 import { indicate } from 'src/app/shared/operators';
 import { GithubApiService } from '../github-api.service';
 import { IActionState, GithubFacadeService } from '../github-facade.service';
@@ -16,6 +16,7 @@ export class GithubRepoHomeComponent implements OnInit {
   loading$ = new Subject<boolean>();
 
   vm$ = this.GithubFacadeService.vm$;
+  errorMsg: string[] = [];
 
   constructor(
     private GithubFacadeService: GithubFacadeService,
@@ -28,15 +29,27 @@ export class GithubRepoHomeComponent implements OnInit {
     this.GithubFacadeService.actionState$.subscribe((state) => {
       console.log('subscribed state: ', state);
 
+      this.errorMsg = [];
+
       const userInfo$ = this.GithubApiService.getUserInfo(
         state.searchQuery
-      ).pipe(filter((data) => data != null));
+      ).pipe(
+        filter((data) => data != null),
+        catchError((error) => {
+          this.errorMsg.push(error);
+          return of(null);
+        })
+      );
 
       const userRepo$ = this.GithubApiService.getReposInfo(
         state.searchQuery
-      ).pipe(filter((data) => data != null));
-
-      console.log('ever here');
+      ).pipe(
+        filter((data) => data != null),
+        catchError((error) => {
+          this.errorMsg.push(error);
+          return of(null);
+        })
+      );
 
       combineLatest([userInfo$, userRepo$])
         .pipe(indicate(this.loading$))
