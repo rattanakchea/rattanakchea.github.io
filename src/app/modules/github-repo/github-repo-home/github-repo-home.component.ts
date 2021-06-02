@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { combineLatest, Subscription } from 'rxjs';
+import { combineLatest, Subject, Subscription } from 'rxjs';
 import { filter, skip } from 'rxjs/operators';
+import { indicate } from 'src/app/shared/operators';
 import { GithubApiService } from '../github-api.service';
 import { IActionState, GithubFacadeService } from '../github-facade.service';
 
@@ -12,6 +13,7 @@ import { IActionState, GithubFacadeService } from '../github-facade.service';
 export class GithubRepoHomeComponent implements OnInit {
   sub: Subscription | null = null;
   actionState: IActionState;
+  loading$ = new Subject<boolean>();
 
   vm$ = this.GithubFacadeService.vm$;
 
@@ -34,8 +36,11 @@ export class GithubRepoHomeComponent implements OnInit {
         state.searchQuery
       ).pipe(filter((data) => data != null));
 
-      combineLatest([userInfo$, userRepo$]).subscribe(
-        ([userInfo, userRepo]) => {
+      console.log('ever here');
+
+      combineLatest([userInfo$, userRepo$])
+        .pipe(indicate(this.loading$))
+        .subscribe(([userInfo, userRepo]) => {
           console.log(userInfo);
           console.log(userRepo);
 
@@ -51,8 +56,7 @@ export class GithubRepoHomeComponent implements OnInit {
               selectedRepo: userRepo.length > 0 ? userRepo[0] : {},
             });
           }
-        }
-      );
+        });
 
       // this.GithubApiService.getUserInfo(state.searchQuery).subscribe(
       //   (result: any) => {

@@ -14,6 +14,12 @@
 </div>
 
 
+<div *ngIf="loading$ | async" class="d-flex justify-content-center">
+    <span>
+        Please wait
+    </span>
+    <my-ellipsis></my-ellipsis>
+</div>
 
 <div class="content d-flex flex-grow-1 align-items-stretch" *ngIf="vm$ | async as vm">
 

@@ -6,22 +6,27 @@ import { EllipsisPipe } from './pipes/ellipsis.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { ProjectsListComponent } from '../modules/projects/projects-list/projects-list.component';
+import { EllipsisComponent } from './components/ellipsis/ellipsis.component';
 
 // import { NavigationComponent } from "./navigation/navigation.component";
 // import { Page404Component } from "./page404/page404.component";
 // import { DynamicNavComponent } from "./dynamic-nav/dynamic-nav.component";
 // import { IntroductionComponent } from "./introduction/introduction.component";
 
-const commonComponents = [LoadingScreenComponent, ProjectsListComponent];
+const commonComponents = [
+  LoadingScreenComponent,
+  ProjectsListComponent,
+  EllipsisComponent,
+  EllipsisPipe,
+];
 @NgModule({
-  declarations: [...commonComponents, EllipsisPipe],
+  declarations: [...commonComponents],
   imports: [CommonModule, RouterModule, ReactiveFormsModule, MaterialModule],
   exports: [
     RouterModule,
-    ...commonComponents,
-    EllipsisPipe,
     ReactiveFormsModule,
     MaterialModule,
+    ...commonComponents,
   ],
 })
 export class SharedModule {}
