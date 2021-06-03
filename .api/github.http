@@ -1,0 +1,14 @@
+# Github REST API
+
+@BASE_URI = https://api.github.com/users
+
+
+### Get user info
+GET {{BASE_URI}}/rattanakchea
+
+### Get user repo
+GET {{BASE_URI}}/rattanakchea/repos
+
+
+### Get README file
+GET https://api.github.com/repos/rattanakchea/devin-css/readme
