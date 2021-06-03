@@ -12,3 +12,6 @@ GET {{BASE_URI}}/rattanakchea/repos
 
 ### Get README file
 GET https://api.github.com/repos/rattanakchea/devin-css/readme
+
+### react-app
+GET https://api.github.com/repos/rattanakchea/react-app/readme

@@ -20,7 +20,7 @@ export class GithubRepoHomeComponent implements OnInit {
 
   constructor(
     private GithubFacadeService: GithubFacadeService,
-    private GithubApiService: GithubApiService
+    public GithubApiService: GithubApiService
   ) {
     this.actionState = this.GithubFacadeService.actionState;
   }
@@ -87,5 +87,11 @@ export class GithubRepoHomeComponent implements OnInit {
     console.log('state: ', state);
 
     this.GithubFacadeService.setState(state);
+  }
+
+  getReadmeURI(login: string, repoName: string) {
+    // return `https://raw.githubusercontent.com/rattanakchea/devin-css/master/README.md`;
+
+    return `https://raw.githubusercontent.com/${login}/${repoName}/master/README.md`;
   }
 }

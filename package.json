@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
     "bootstrap": "latest",
+    "ngx-markdown": "^12.0.1",
     "ngx-papaparse": "^5.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -50,6 +50,21 @@ export class GithubApiService {
     );
   }
 
+  getReadmeFileURL(owner: string, repoName: string): Observable<any> {
+    // example
+    // https://api.github.com/repos/rattanakchea/devin-css/readme
+
+    let URL = `https://api.github.com/repos/${owner}/${repoName}/readme`;
+
+    // has inner observable, potential memory leak - many http call requests
+    // Fixes
+    // exhaustMap pipe ?
+    // remove map pipe ?
+
+    return this.httpClient.get(URL);
+    // .pipe(map((result: any) => result.download_url));
+  }
+
   // Generic error handling
   private handleError(error: HttpErrorResponse): Observable<string> {
     let errorMsg = '';
