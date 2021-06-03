@@ -43,7 +43,6 @@ export class GithubRepoHomeComponent implements OnInit {
       const userRepo$ = this.GithubApiService.getReposInfo(
         state.searchQuery
       ).pipe(
-        filter((data) => data != null),
         catchError((error) => {
           this.errorMsg.push(error);
           return of(null);

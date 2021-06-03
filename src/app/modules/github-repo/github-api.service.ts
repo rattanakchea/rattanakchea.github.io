@@ -44,7 +44,10 @@ export class GithubApiService {
     }
 
     let URL = `${this.BASE_URI}/${username}/repos?sort=updated`;
-    return this.httpClient.get(URL).pipe(catchError(this.handleError));
+    return this.httpClient.get(URL).pipe(
+      filter((data) => data != null),
+      catchError(this.handleError)
+    );
   }
 
   // Generic error handling

@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IGithubRepoState } from '../github-facade.service';
+import {
+  GithubFacadeService,
+  IGithubRepoState,
+} from '../github-facade.service';
 
 @Component({
   selector: 'app-github-repo-list',
@@ -9,7 +12,14 @@ import { IGithubRepoState } from '../github-facade.service';
 export class GithubRepoListComponent implements OnInit {
   @Input() data: IGithubRepoState | null = null;
 
-  constructor() {}
+  constructor(private GithubFacadeService: GithubFacadeService) {}
 
   ngOnInit(): void {}
+
+  selectRepo(repo: any) {
+    console.log(repo);
+    this.GithubFacadeService.setState2({
+      selectedRepo: repo,
+    });
+  }
 }
