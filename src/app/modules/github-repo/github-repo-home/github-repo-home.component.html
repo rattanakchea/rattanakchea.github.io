@@ -23,9 +23,9 @@
     <my-ellipsis></my-ellipsis>
 </div>
 
-<p class="text-warning text-center" *ngIf="errorMsg">
-    {{ errorMsg | json }}
-</p>
+<ul class="text-warning text-center" *ngIf="errorMsg">
+    <li *ngFor="let msg of errorMsg">{{msg}}</li>
+</ul>
 
 <div class="content d-flex flex-grow-1 align-items-stretch" *ngIf="vm$ | async as vm">
 
@@ -33,7 +33,7 @@
         <div class="d-flex flex-column mb-3 mb-md-0 link-dark text-decoration-none w-100">
 
             <div class="text-center d-flex align-items-center" *ngIf="vm.userInfo.avatar_url">
-                <span class="fs-4">{{vm.userInfo.name}}</span>
+                <span class="fs-4">{{vm.userInfo.name || vm.userInfo.login}}</span>
                 <img [src]="vm.userInfo.avatar_url" class="rounded" alt="avatar" width="30px">
 
                 <a class="ms-auto" [href]="vm.userInfo.html_url" target="_blank">Github</a>

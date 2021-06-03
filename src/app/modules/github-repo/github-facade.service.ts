@@ -6,6 +6,7 @@ import { skip } from 'rxjs/operators';
 export interface IGithubRepoState {
   userInfo: {
     name: string;
+    login: string;
     avatar_url: string;
     html_url: string;
     followers: number;
@@ -19,6 +20,7 @@ export interface IGithubRepoState {
 const initialState: IGithubRepoState = {
   userInfo: {
     name: '',
+    login: '',
     avatar_url: '',
     html_url: '',
     followers: 0,
@@ -68,7 +70,6 @@ export class GithubFacadeService {
     new BehaviorSubject<IGithubRepoState>(initialState);
 
   // skip initial state, or use Subject
-
   vm$ = this._githubSubject.asObservable().pipe(skip(1));
 
   constructor() {}

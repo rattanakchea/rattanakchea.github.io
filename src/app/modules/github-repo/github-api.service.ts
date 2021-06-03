@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, filter, map } from 'rxjs/operators';
+import { IGithubRepoState } from './github-facade.service';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +24,17 @@ export class GithubApiService {
     }
 
     let URL = `${this.BASE_URI}/${username}`;
-    return this.httpClient.get(URL).pipe(catchError(this.handleError));
+
+    // let service handle all data transform, filter
+    return this.httpClient.get(URL).pipe(
+      filter((data) => data != null),
+      map((userInfo: any) => {
+        const { name, login, followers, following, avatar_url, html_url } =
+          userInfo;
+        return { name, login, followers, following, avatar_url, html_url };
+      }),
+      catchError(this.handleError)
+    );
   }
 
   getReposInfo(username: string): Observable<any> {

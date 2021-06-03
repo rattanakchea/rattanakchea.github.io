@@ -34,7 +34,6 @@ export class GithubRepoHomeComponent implements OnInit {
       const userInfo$ = this.GithubApiService.getUserInfo(
         state.searchQuery
       ).pipe(
-        filter((data) => data != null),
         catchError((error) => {
           this.errorMsg.push(error);
           return of(null);
@@ -54,17 +53,13 @@ export class GithubRepoHomeComponent implements OnInit {
       combineLatest([userInfo$, userRepo$])
         .pipe(indicate(this.loading$))
         .subscribe(([userInfo, userRepo]) => {
-          console.log(userInfo);
           console.log(userRepo);
 
           // Todo avoid null automatically
           if (userInfo && userRepo) {
-            const { name, followers, following, avatar_url, html_url } =
-              userInfo;
-
             // set the GithubSubject VM state
             this.GithubFacadeService.setState2({
-              userInfo: { name, avatar_url, followers, following, html_url },
+              userInfo,
               repoList: userRepo,
               selectedRepo: userRepo.length > 0 ? userRepo[0] : {},
             });
