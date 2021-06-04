@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
 import { ProjectsListComponent } from '../modules/projects/projects-list/projects-list.component';
 import { EllipsisComponent } from './components/ellipsis/ellipsis.component';
+import { MarkdownComponent } from './components/markdown/markdown.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 // import { NavigationComponent } from "./navigation/navigation.component";
 // import { Page404Component } from "./page404/page404.component";
@@ -18,10 +20,17 @@ const commonComponents = [
   ProjectsListComponent,
   EllipsisComponent,
   EllipsisPipe,
+  MarkdownComponent,
 ];
 @NgModule({
   declarations: [...commonComponents],
-  imports: [CommonModule, RouterModule, ReactiveFormsModule, MaterialModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    MarkdownModule.forRoot(),
+  ],
   exports: [
     RouterModule,
     ReactiveFormsModule,

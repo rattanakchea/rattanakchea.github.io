@@ -77,9 +77,10 @@
 
         <!-- parse readme markdown -->
 
-        <ng-container
-            *ngIf="GithubApiService.getReadmeFileURL(vm.userInfo.login, vm.selectedRepo.name) | async as result">
-            <markdown [src]="result.download_url"></markdown>
+        <!-- Don't use function call -->
+        <!-- make markdown reader a component ? -->
+        <ng-container *ngIf="vm.userInfo.login && vm.selectedRepo.name ">
+            <app-markdown [login]="vm.userInfo.login" [repo]="vm.selectedRepo.name"></app-markdown>
         </ng-container>
 
         <!-- <markdown src="assets/README.md"></markdown> -->

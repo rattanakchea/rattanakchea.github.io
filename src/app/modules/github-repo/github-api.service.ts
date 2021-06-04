@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
-import { catchError, filter, map } from 'rxjs/operators';
+import { catchError, filter, map, share } from 'rxjs/operators';
 import { IGithubRepoState } from './github-facade.service';
 
 @Injectable({
@@ -51,10 +51,13 @@ export class GithubApiService {
   }
 
   getReadmeFileURL(owner: string, repoName: string): Observable<any> {
-    // example
-    // https://api.github.com/repos/rattanakchea/devin-css/readme
+    console.log('get readme file: ');
 
-    let URL = `https://api.github.com/repos/${owner}/${repoName}/readme`;
+    // example
+    let URL = `https://raw.githubusercontent.com/rattanakchea/rattanakchea.github.io/master/README.md`;
+    return of(URL).pipe(share());
+
+    // let URL = `https://api.github.com/repos/${owner}/${repoName}/readme`;
 
     // has inner observable, potential memory leak - many http call requests
     // Fixes
