@@ -73,6 +73,8 @@
                 </dd>
             </dl>
 
+            <hr>
+
         </ng-container>
 
         <!-- parse readme markdown -->
@@ -80,6 +82,8 @@
         <!-- Don't use function call -->
         <!-- make markdown reader a component ? -->
         <ng-container *ngIf="vm.userInfo.login && vm.selectedRepo.name ">
+
+            <h3 class="text-primary">Readme File</h3>
             <app-markdown [login]="vm.userInfo.login" [repo]="vm.selectedRepo.name"></app-markdown>
         </ng-container>
 

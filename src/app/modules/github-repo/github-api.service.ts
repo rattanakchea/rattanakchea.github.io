@@ -58,12 +58,6 @@ export class GithubApiService {
     return of(URL).pipe(share());
 
     // let URL = `https://api.github.com/repos/${owner}/${repoName}/readme`;
-
-    // has inner observable, potential memory leak - many http call requests
-    // Fixes
-    // exhaustMap pipe ?
-    // remove map pipe ?
-
     return this.httpClient.get(URL);
     // .pipe(map((result: any) => result.download_url));
   }
