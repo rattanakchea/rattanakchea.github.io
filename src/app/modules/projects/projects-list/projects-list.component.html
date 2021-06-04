@@ -12,8 +12,8 @@
                     <p class="text-muted">
                         <strong>Technology </strong> <span>Flexbox, Bootstrap, JavaScript, CSS3</span>
                     </p>
-                    <a class="card-link" [href]="item.source">Source Code</a>
-                    <a class="card-link" [href]="item.demo">Demo</a>
+                    <a class="card-link" [href]="item.source" *ngIf="item.source">Source Code</a>
+                    <a class="card-link" [href]="item.demo" *ngIf="item.demo">Demo</a>
                 </div>
             </div>
         </div>

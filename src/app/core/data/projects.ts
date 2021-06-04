@@ -27,12 +27,23 @@ const ProjectURLs = {
 
 export const Projects = [
   {
+    id: 'github',
+    title: 'Github Repo Reader',
+    description:
+      'Build interactive components and clean UI. Use rxjs as data store to communicate with Github REST API.',
+    dateCreated: '01/01/2021',
+    demo: '/github-repo',
+    source: 'https://github.com/rattanakchea/rattanakchea.github.io',
+    image: '/assets/projects-screenshots/github-repo.png',
+    featured: true,
+  },
+  {
     id: 'robinhood',
     title: 'Robinhood App Clone',
     description: 'Build Robinhood clone with Angular 11',
     dateCreated: '01/01/2021',
     demo: ProjectURLs.robinhood.URL,
-    source: '',
+    source: 'https://github.com/rattanakchea/rattanakchea.github.io',
     image: ProjectURLs.robinhood.image,
     featured: true,
   },
