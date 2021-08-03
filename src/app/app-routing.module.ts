@@ -7,6 +7,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./core/core.module').then((m) => m.CoreModule),
   },
+
   {
     path: 'projects', //lazy load route
     loadChildren: () =>
@@ -29,10 +30,17 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'github-repo', //lazy load route
+    path: 'github-repo',
     loadChildren: () =>
       import('./pages/github-repo/github-repo.module').then(
         (m) => m.GithubRepoModule
+      ),
+  },
+  {
+    path: 'playground',
+    loadChildren: () =>
+      import('./pages/playground/playground.module').then(
+        (m) => m.PlaygroundModule
       ),
   },
   {
