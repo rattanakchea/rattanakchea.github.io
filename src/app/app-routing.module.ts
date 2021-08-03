@@ -17,21 +17,21 @@ const routes: Routes = [
   {
     path: 'robinhood', //lazy load route
     loadChildren: () =>
-      import('./modules/robinhood/robinhood.module').then(
+      import('./pages/robinhood/robinhood.module').then(
         (m) => m.RobinhoodLibModule
       ),
   },
   {
     path: 'bootstrap-ui',
     loadChildren: () =>
-      import('./modules/bootstrap-ui/bootstrap-ui.module').then(
+      import('./pages/bootstrap-ui/bootstrap-ui.module').then(
         (m) => m.BootstrapUIModule
       ),
   },
   {
     path: 'github-repo', //lazy load route
     loadChildren: () =>
-      import('./modules/github-repo/github-repo.module').then(
+      import('./pages/github-repo/github-repo.module').then(
         (m) => m.GithubRepoModule
       ),
   },
